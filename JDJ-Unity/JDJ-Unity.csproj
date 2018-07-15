@@ -306,8 +306,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Game\Scripts\GridController.cs" />
-    <Compile Include="Assets\Game\Scripts\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\_Game\Scripts\GameMode.cs" />
+    <Compile Include="Assets\_Game\Scripts\GridController.cs" />
+    <Compile Include="Assets\_Game\Scripts\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\MoveInLane.cs" />
+    <Compile Include="Assets\_Game\Scripts\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />

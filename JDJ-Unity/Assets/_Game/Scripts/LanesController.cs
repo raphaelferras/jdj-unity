@@ -10,11 +10,11 @@ public class LanesController : MonoBehaviour {
     public GameObject lanePrefab2;
     public float startPos = -2.5f;
     public float zposition = 25.5f;
-
+    private float delta;
     // Use this for initialization
     void Start () {
         float x = startPos;
-        float delta = (startPos * -2)/(lanesCount-1);
+        delta = (startPos * -2)/(lanesCount-1);
 		for (int i =0; i < lanesCount; i++, x+= delta)
         {
             GameObject lane;
@@ -33,4 +33,9 @@ public class LanesController : MonoBehaviour {
         }
     }
 
+
+    public float GetXPosition(int lane)
+    {
+        return startPos + lane * delta;
+    }
 }
