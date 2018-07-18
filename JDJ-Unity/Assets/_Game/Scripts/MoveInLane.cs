@@ -13,6 +13,10 @@ public class MoveInLane : MonoBehaviour {
     private float startPos;
     private float yPosition;
 
+    private Monster monster;
+
+    public bool lastMoveSet;
+
     private void Start()
     {
         startPos = GameMode.Instance.startLanePosition;
@@ -21,6 +25,13 @@ public class MoveInLane : MonoBehaviour {
         lanePos = GameMode.Instance.lanes.GetXPosition(lane, lanesSize);
         yPosition = GameMode.Instance.floorHeight;
         this.transform.position = new Vector3(lanePos, yPosition, position);
+        monster = GetComponent<Monster>();
+        lastMoveSet = true;
+
+        if (monster != null)
+        {
+            monster.SetMove(true);
+        }
     }
 
     private void Update()
@@ -29,10 +40,29 @@ public class MoveInLane : MonoBehaviour {
         if (position < endPos)
         {
             position = endPos;
+            if (monster != null)
+            {
+                if (lastMoveSet != false)
+                {
+                    monster.SetMove(false);
+                    lastMoveSet = false;
+                }
+                monster.Attack();
+            }
         }
-        if (position > startPos)
+        else
+        {
+            if (lastMoveSet != true && monster != null)
+            {
+                monster.SetMove(true);
+                lastMoveSet = true;
+            }
+        }
+
+        if (position >= startPos)
         {
             position = startPos;
+
         }
         this.transform.position = new Vector3(lanePos, yPosition, position);
     }

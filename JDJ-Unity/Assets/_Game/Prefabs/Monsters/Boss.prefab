@@ -1265,6 +1265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  lanesSize: 2
   lane: 0
   position: 0
   lanePos: 0

@@ -310,6 +310,8 @@ MonoBehaviour:
   - {fileID: 1769434026818638, guid: e436e19959e914945a12857a1951de61, type: 2}
   - {fileID: 1281376249252964, guid: e7c964e2ba231fe478c6ba8f465c2c40, type: 2}
   - {fileID: 1897240651250048, guid: 1ddba9e3da3af024d8cf2b6b3ffe279b, type: 2}
+  - {fileID: 1106225941831646, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
+  - {fileID: 1106225941831646, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
   deltaTime: 2
 --- !u!4 &800339940
 Transform:
@@ -415,7 +417,6 @@ GameObject:
   - component: {fileID: 953028884}
   - component: {fileID: 953028883}
   - component: {fileID: 953028882}
-  - component: {fileID: 953028881}
   - component: {fileID: 953028880}
   m_Layer: 0
   m_Name: Camera (2)
@@ -432,13 +433,6 @@ Skybox:
   m_GameObject: {fileID: 953028879}
   m_Enabled: 1
   m_CustomSkybox: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
---- !u!81 &953028881
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 953028879}
-  m_Enabled: 1
 --- !u!124 &953028882
 Behaviour:
   m_ObjectHideFlags: 0

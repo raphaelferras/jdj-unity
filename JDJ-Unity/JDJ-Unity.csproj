@@ -308,6 +308,7 @@
     <Compile Include="Assets\_Game\Scripts\GameMode.cs" />
     <Compile Include="Assets\_Game\Scripts\GridController.cs" />
     <Compile Include="Assets\_Game\Scripts\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Monster.cs" />
     <Compile Include="Assets\_Game\Scripts\MoveInLane.cs" />
     <Compile Include="Assets\_Game\Scripts\Singleton.cs" />
   </ItemGroup>
