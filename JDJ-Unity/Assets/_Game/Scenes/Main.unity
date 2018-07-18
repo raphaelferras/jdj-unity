@@ -312,6 +312,12 @@ MonoBehaviour:
   - {fileID: 1897240651250048, guid: 1ddba9e3da3af024d8cf2b6b3ffe279b, type: 2}
   - {fileID: 1106225941831646, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
   - {fileID: 1106225941831646, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
+  - {fileID: 1887481297582568, guid: 5ac2c7840f9ad6e4da3f197e8b8a74fc, type: 2}
+  - {fileID: 1887481297582568, guid: 5ac2c7840f9ad6e4da3f197e8b8a74fc, type: 2}
+  - {fileID: 1119639326969194, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8, type: 2}
+  - {fileID: 1119639326969194, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8, type: 2}
+  - {fileID: 1788532388268766, guid: c57f0c24ae950d34ebe1461abadb00d0, type: 2}
+  - {fileID: 1788532388268766, guid: c57f0c24ae950d34ebe1461abadb00d0, type: 2}
   deltaTime: 2
 --- !u!4 &800339940
 Transform:
