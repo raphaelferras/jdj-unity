@@ -80,8 +80,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colunsCount: 6
   rowsCount: 5
-  topPosition: 0
-  jellySize: 90
+  topPosition: -50
+  jellySize: 70
   possibleJelly: {fileID: 1256553996401726, guid: 822ca8903518a744a8af7b1567274faa,
     type: 2}
 --- !u!223 &223651777359026254
