@@ -11,12 +11,12 @@ public class LanesController : MonoBehaviour {
     public float startPos = -2.5f;
     public float zposition = 25.5f;
     private float delta;
-    public float yPosition = 0.0f;
     public GameObject floor;
     // Use this for initialization
     void Start () {
         float x = startPos;
         delta = (startPos * -2)/(lanesCount-1);
+        float yPosition = GameMode.Instance.floorHeight;
 		for (int i =0; i < lanesCount; i++, x+= delta)
         {
             GameObject lane;
@@ -40,5 +40,9 @@ public class LanesController : MonoBehaviour {
     public float GetXPosition(int lane)
     {
         return startPos + lane * delta;
+    }
+    public float GetXPosition(int lane, int size)
+    {
+        return startPos + lane * delta + ((size-1) * delta)/2.0f;
     }
 }

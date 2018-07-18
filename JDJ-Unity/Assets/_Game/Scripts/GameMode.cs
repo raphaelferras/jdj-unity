@@ -6,6 +6,7 @@ public class GameMode : Singleton<GameMode> {
 
     public float startLanePosition;
     public float endLanePosition;
+    public float floorHeight;
 
     public GameObject floorPrefab;
     public GameObject gridPrefab;

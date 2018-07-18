@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour {
 
-    public GameObject simpleEnemy;
+    public List<GameObject> enemyList;
 
     public float deltaTime;
     private float timer;
@@ -26,9 +26,9 @@ public class EnemyController : MonoBehaviour {
 
     private void SpawnEnemy()
     {
-        GameObject enemy = Instantiate(simpleEnemy);
+        GameObject enemy = Instantiate(enemyList[Random.Range(0,enemyList.Count)]);
         MoveInLane mil = enemy.GetComponent<MoveInLane>();
         mil.speed *= Random.Range(0.8f,1.2f);
-        mil.lane = Random.Range(0, GameMode.Instance.lanes.lanesCount);
+        mil.lane = Random.Range(0, GameMode.Instance.lanes.lanesCount + 1 - mil.lanesSize);
     }
 }

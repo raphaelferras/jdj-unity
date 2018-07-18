@@ -5,19 +5,22 @@ using UnityEngine;
 public class MoveInLane : MonoBehaviour {
 
     public float speed;
+    public int lanesSize = 1;
     public int lane;
     public float position;
     public float lanePos;
     private float endPos;
     private float startPos;
+    private float yPosition;
 
     private void Start()
     {
         startPos = GameMode.Instance.startLanePosition;
         position = startPos ;
         endPos = GameMode.Instance.endLanePosition;
-        lanePos = GameMode.Instance.lanes.GetXPosition(lane);
-        this.transform.position = new Vector3(lanePos,0,position);
+        lanePos = GameMode.Instance.lanes.GetXPosition(lane, lanesSize);
+        yPosition = GameMode.Instance.floorHeight;
+        this.transform.position = new Vector3(lanePos, yPosition, position);
     }
 
     private void Update()
@@ -31,6 +34,6 @@ public class MoveInLane : MonoBehaviour {
         {
             position = startPos;
         }
-        this.transform.position = new Vector3(lanePos, 0, position);
+        this.transform.position = new Vector3(lanePos, yPosition, position);
     }
 }
