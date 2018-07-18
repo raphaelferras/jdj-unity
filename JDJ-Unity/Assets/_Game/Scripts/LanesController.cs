@@ -11,6 +11,8 @@ public class LanesController : MonoBehaviour {
     public float startPos = -2.5f;
     public float zposition = 25.5f;
     private float delta;
+    public float yPosition = 0.0f;
+    public GameObject floor;
     // Use this for initialization
     void Start () {
         float x = startPos;
@@ -25,12 +27,13 @@ public class LanesController : MonoBehaviour {
                 lane = Instantiate(lanePrefab2, this.transform);
             }
             Vector3 pos = lane.transform.position;
-            pos.Set(x, pos.y, zposition);
+            pos.Set(x, yPosition, zposition);
             lane.transform.position = pos;
             Vector3 scale = lane.transform.localScale;
             scale.Set(delta, scale.y, scale.z);
             lane.transform.localScale = scale;
         }
+        floor.transform.position = new Vector3(floor.transform.position.x, yPosition - 0.05f, floor.transform.position.z);
     }
 
 

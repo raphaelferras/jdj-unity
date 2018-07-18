@@ -25,6 +25,7 @@ public class GridController : MonoBehaviour {
                 GameObject jelly = Instantiate(possibleJelly, this.transform);
                 RectTransform r = jelly.GetComponent<RectTransform>();
                 r.localPosition = new Vector3(x, y, 0);//, new Quaternion());
+                r.sizeDelta = new Vector2(jellySize, jellySize);
             }
             x = leftPosition;
         }
