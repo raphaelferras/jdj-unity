@@ -16,11 +16,19 @@ public class MoveInLane : MonoBehaviour {
     private Monster monster;
 
     public bool lastMoveSet;
+    public bool power;
 
     private void Start()
     {
         startPos = GameMode.Instance.startLanePosition;
-        position = startPos ;
+        if (power)
+        {
+            position = GameMode.Instance.endLanePosition;
+        }
+        else
+        {
+            position = GameMode.Instance.startLanePosition;
+        }
         endPos = GameMode.Instance.endLanePosition;
         lanePos = GameMode.Instance.lanes.GetXPosition(lane, lanesSize);
         yPosition = GameMode.Instance.floorHeight;
@@ -43,7 +51,7 @@ public class MoveInLane : MonoBehaviour {
     private void Update()
     {
         position -= speed;
-        if (position < endPos)
+        if (position <= endPos)
         {
             position = endPos;
             if (monster != null)
@@ -68,7 +76,10 @@ public class MoveInLane : MonoBehaviour {
         if (position >= startPos)
         {
             position = startPos;
-
+            //if (power)
+            //{
+            //    Destroy(this.gameObject);
+            //}
         }
         this.transform.position = new Vector3(lanePos, yPosition, position);
     }

@@ -304,12 +304,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Game\Scripts\DestroyOnTouch.cs" />
     <Compile Include="Assets\_Game\Scripts\EnemyController.cs" />
     <Compile Include="Assets\_Game\Scripts\GameMode.cs" />
     <Compile Include="Assets\_Game\Scripts\GridController.cs" />
     <Compile Include="Assets\_Game\Scripts\LanesController.cs" />
     <Compile Include="Assets\_Game\Scripts\Monster.cs" />
     <Compile Include="Assets\_Game\Scripts\MoveInLane.cs" />
+    <Compile Include="Assets\_Game\Scripts\PowerController.cs" />
     <Compile Include="Assets\_Game\Scripts\Singleton.cs" />
   </ItemGroup>
   <ItemGroup>
