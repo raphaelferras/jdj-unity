@@ -584,6 +584,9 @@ MonoBehaviour:
   startLanePosition: 51
   endLanePosition: 1
   floorHeight: -0.6
+  jellySize: 75
+  JellySpeed: 10
+  jellyReplaceTimer: 0.5
   floorPrefab: {fileID: 1867333762144184, guid: 85357c29bec629f49b442decae708ad3,
     type: 2}
   gridPrefab: {fileID: 1006787709415742, guid: 71daa7d240f21134492527ec9b238823, type: 2}

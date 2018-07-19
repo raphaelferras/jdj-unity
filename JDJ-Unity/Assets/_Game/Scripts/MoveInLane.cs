@@ -76,10 +76,10 @@ public class MoveInLane : MonoBehaviour {
         if (position >= startPos)
         {
             position = startPos;
-            //if (power)
-            //{
-            //    Destroy(this.gameObject);
-            //}
+            if (power)
+            {
+                Destroy(this.gameObject);
+            }
         }
         this.transform.position = new Vector3(lanePos, yPosition, position);
     }

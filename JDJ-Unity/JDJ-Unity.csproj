@@ -300,8 +300,11 @@
     <Compile Include="Assets\_Game\Scripts\LanesController.cs" />
     <Compile Include="Assets\_Game\Scripts\Monster.cs" />
     <Compile Include="Assets\_Game\Scripts\MoveInLane.cs" />
+    <Compile Include="Assets\_Game\Scripts\Power\Fireball.cs" />
     <Compile Include="Assets\_Game\Scripts\PowerController.cs" />
+    <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\Singleton.cs" />
+    <Compile Include="Assets\JellyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
