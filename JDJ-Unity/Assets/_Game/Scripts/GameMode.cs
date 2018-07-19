@@ -7,6 +7,9 @@ public class GameMode : Singleton<GameMode> {
     public float startLanePosition;
     public float endLanePosition;
     public float floorHeight;
+    public float jellySize;
+    public float JellySpeed;
+    public float jellyReplaceTimer;
 
     public GameObject floorPrefab;
     public GameObject gridPrefab;
