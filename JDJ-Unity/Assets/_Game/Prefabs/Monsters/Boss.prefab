@@ -1258,7 +1258,7 @@ Animator:
   m_GameObject: {fileID: 1251236605141724}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e85addd11f719ec488327f70532c7e54, type: 3}
-  m_Controller: {fileID: 9100000, guid: fdae88b660e637a478a9bde2143480c2, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6729af2de11e5ab49b367fbada32c92c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1284,6 +1284,7 @@ MonoBehaviour:
   position: 0
   lanePos: 0
   lastMoveSet: 0
+  power: 0
 --- !u!114 &114718379839182016
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1295,7 +1296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0343ce7adc113bf42b5a70ed6b283838, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  animator: {fileID: 95180646874251888}
 --- !u!137 &137159864192275820
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

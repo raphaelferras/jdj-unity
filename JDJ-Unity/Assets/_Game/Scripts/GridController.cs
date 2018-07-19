@@ -46,7 +46,6 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         {
             float x = ((position.x - bounds.x) / bounds.width) * colunsCount;
             float y = ((position.y - bounds.y) / bounds.height) * rowsCount;
-            Debug.Log("MOVE:   x: " + x + "  y: " + y);
         }
     }
 
@@ -57,7 +56,6 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         {
             float x = ((position.x - bounds.x) / bounds.width) * colunsCount;
             float y = ((position.y - bounds.y) / bounds.height) * rowsCount;
-            Debug.Log("DOWN x: " + x + "  y: " + y);
         }
     }
 
@@ -68,7 +66,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         {
             float x = ((position.x - bounds.x) / bounds.width) * colunsCount;
             float y = ((position.y - bounds.y) / bounds.height) * rowsCount;
-            Debug.Log("UP  x: " + x + "  y: " + y);
+            PowerController.Instance.Spawn((int) x);
         }
     }
 }
