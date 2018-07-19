@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4462536904350374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeadControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,7 +34,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4681113708139092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rEarJoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4422989075242200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65,7 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4656796925656270}
   - component: {fileID: 95616631545164150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rabbit_Cyan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4338558496618456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lEarJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4752355850636964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RIG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4400806485335392}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lEarJoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4346749390234812}
   - component: {fileID: 137915551525234940}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MESH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,7 +141,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4727209588315516}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lEarJoint3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4635745249198088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rEarJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4278615502522242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rEarControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -186,7 +186,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4813135849071930}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HipControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4583459631318876}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lToeJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -216,7 +216,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4114145103615568}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RabbitControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4544691070086912}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rEarControl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4755906201893452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lEarControl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4744680411602860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lEarControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -276,7 +276,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4131090224305068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lFootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4296787574507062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: lFeetControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -306,7 +306,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4987551895083900}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rEarJoint2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -321,7 +321,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4791331531104134}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rFeetControl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -336,7 +336,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4053198574184584}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rFootJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -351,7 +351,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4347468302194256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: rToeJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -368,7 +368,8 @@ GameObject:
   - component: {fileID: 4008073795198898}
   - component: {fileID: 114810406531092416}
   - component: {fileID: 114788040345703604}
-  m_Layer: 0
+  - component: {fileID: 65030394086732818}
+  m_Layer: 8
   m_Name: Rabbit_Cyan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +384,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4778663238747906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeadJoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -608,7 +609,7 @@ Transform:
   m_GameObject: {fileID: 1072548220642912}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 25, y: 25, z: 25}
+  m_LocalScale: {x: 40, y: 40, z: 40}
   m_Children:
   - {fileID: 4346749390234812}
   - {fileID: 4752355850636964}
@@ -739,6 +740,18 @@ Transform:
   m_Father: {fileID: 4635745249198088}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &65030394086732818
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1887481297582568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95616631545164150
 Animator:
   serializedVersion: 3

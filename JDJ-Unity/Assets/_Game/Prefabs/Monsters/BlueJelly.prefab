@@ -20,7 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4802532785315716}
   - component: {fileID: 114551195342125524}
-  m_Layer: 0
+  - component: {fileID: 114478724260164328}
+  - component: {fileID: 65857180848081612}
+  m_Layer: 8
   m_Name: BlueJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +40,7 @@ GameObject:
   - component: {fileID: 33897970021767300}
   - component: {fileID: 23370248323839794}
   - component: {fileID: 95624381456899812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlueJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +116,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360548096878994}
   m_Mesh: {fileID: 4300000, guid: 36aaf28fdb2e04b498b7242a49acf5eb, type: 3}
+--- !u!65 &65857180848081612
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281376249252964}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95624381456899812
 Animator:
   serializedVersion: 3
@@ -132,6 +146,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114478724260164328
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1281376249252964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343ce7adc113bf42b5a70ed6b283838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!114 &114551195342125524
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -144,6 +170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  lanesSize: 1
   lane: 0
   position: 0
   lanePos: 0
+  lastMoveSet: 0

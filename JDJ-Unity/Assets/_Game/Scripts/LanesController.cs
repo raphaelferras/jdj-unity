@@ -41,8 +41,14 @@ public class LanesController : MonoBehaviour {
     {
         return startPos + lane * delta;
     }
+
     public float GetXPosition(int lane, int size)
     {
         return startPos + lane * delta + ((size-1) * delta)/2.0f;
+    }
+
+    public float GetLaneSize()
+    {
+        return delta;
     }
 }

@@ -32,6 +32,12 @@ public class MoveInLane : MonoBehaviour {
         {
             monster.SetMove(true);
         }
+        BoxCollider c = GetComponent<BoxCollider>();
+        if (c != null)
+        {
+            float laneSize = GameMode.Instance.lanes.GetLaneSize();
+            c.size = new Vector3(laneSize*lanesSize, laneSize * lanesSize, laneSize * lanesSize);
+        }
     }
 
     private void Update()

@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33680460558767880}
   - component: {fileID: 23007560029846936}
   - component: {fileID: 95043606785775180}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GreenJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4127424192068166}
   - component: {fileID: 114163368994170666}
-  m_Layer: 0
+  - component: {fileID: 114236728521244590}
+  - component: {fileID: 65305378352649804}
+  m_Layer: 8
   m_Name: GreenJelly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,6 +116,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1705024006417766}
   m_Mesh: {fileID: 4300000, guid: 5f7ddeb4b3250a848995669baa3880c4, type: 3}
+--- !u!65 &65305378352649804
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769434026818638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &95043606785775180
 Animator:
   serializedVersion: 3
@@ -144,6 +158,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.2
+  lanesSize: 1
   lane: 0
   position: 0
   lanePos: 0
+  lastMoveSet: 0
+--- !u!114 &114236728521244590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1769434026818638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0343ce7adc113bf42b5a70ed6b283838, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
