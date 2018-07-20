@@ -15,10 +15,12 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     public RectTransform backgound;
     private Rect bounds;
     private float replaceTimer;
+
     private JellyController[,] grid;
     private bool[,] selected;
-
-
+    private PowerConfig selectedType;
+    private int lastSelectedX;
+    private int lastSelectedY;
 
     // Use this for initialization
     void Start () {
@@ -126,7 +128,10 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        HandleTouch(eventData);
+        if(selectedType != null)
+        {
+            HandleTouch(eventData);
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -141,29 +146,33 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         {
             int x, y;
             GetPosition(position, out x, out y);
-            if (!selected[x, y])
+            if (selectedType!= null && (Mathf.Abs(x-lastSelectedX) > 1 || Mathf.Abs(y - lastSelectedY) > 1))
             {
+                return;
+            }
+            if (grid[x, y] != null && !grid[x, y].isMoving && !selected[x, y] && (selectedType == null || selectedType == grid[x, y].type))
+            {
+                lastSelectedX = x;
+                lastSelectedY = y;
                 selected[x, y] = true;
                 grid[x, y].SetSelected(true);
+                if (selectedType == null)
+                {
+                    selectedType = grid[x, y].type;
+                }
             }
         }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Vector2 position = eventData.position;
-        if (bounds.Contains(position))
+        if (selectedType != null)
         {
-            int x, y;
-            GetPosition(position, out x, out y);
-
-            if (grid[x,y] != null)
-            {
-                PowerController.Instance.Spawn((int)x, grid[x, y].type);
-                ClearSelectedGrid();
-            }
+            PowerController.Instance.Spawn(lastSelectedX, selectedType);
+            ClearSelectedGrid();
         }
         RemoveGridSelection();
+        selectedType = null;
     }
 
     private void ClearSelectedGrid()
@@ -180,7 +189,6 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
             }
         }
-
     }
 
     private void GetPosition(Vector2 pos, out int x, out int y)
