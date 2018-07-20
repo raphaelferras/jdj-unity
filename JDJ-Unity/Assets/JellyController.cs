@@ -10,6 +10,13 @@ public class JellyController : MonoBehaviour {
     private RectTransform rect;
     private float jellySpeed;
     public bool isMoving = false;
+    public bool isSelected = false;
+    public RectTransform animateRect;
+    private Vector3 initialScale;
+    private float value;
+    public float deltaSize;
+    private bool isIncreasing;
+
     private void Awake()
     {
         jellySize = GameMode.Instance.jellySize;
@@ -17,11 +24,14 @@ public class JellyController : MonoBehaviour {
         rect = GetComponent<RectTransform>();
         rect.sizeDelta = new Vector2(jellySize, jellySize);
         isMoving = false;
+        initialScale = animateRect.localScale;
+        isIncreasing = true;
     }
 
     private void Update()
     {
         UpdatePosition();
+        SelectedAnimation();
     }
 
     private void UpdatePosition()
@@ -44,6 +54,35 @@ public class JellyController : MonoBehaviour {
 
     }
 
+    private void SelectedAnimation()
+    {
+        if (!isSelected)
+        {
+            value = 1.0f;
+            animateRect.localScale = initialScale;
+            return;
+        }
+        if (isIncreasing)
+        {
+            value +=Time.deltaTime;
+            if(value >= 1.0f + deltaSize)
+            {
+                isIncreasing = false;
+            }
+        }
+        else
+        {
+            value -= Time.deltaTime;
+            if (value <= 1.0f)
+            {
+                isIncreasing = true;
+            }
+        }
+
+        animateRect.localScale = initialScale * value;
+    }
+
+
     public void MoveTo(Vector3 position)
     {
         nextPosition = position;
@@ -57,5 +96,9 @@ public class JellyController : MonoBehaviour {
         isMoving = false;
     }
 
+    public void SetSelected(bool value)
+    {
+        isSelected = value;
+    }
 
 }
