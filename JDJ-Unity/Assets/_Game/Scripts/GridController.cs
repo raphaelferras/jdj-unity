@@ -56,8 +56,11 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         }
         for (int y = rowsCount - 1; y >= 1; y--)
         {
-            for (int x = 0; x < colunsCount; x++)
+            int startPosition = Random.Range(0, colunsCount);
+
+            for (int _x = 0; _x < colunsCount; _x++)
             {
+                int x = (_x + startPosition) % colunsCount;
                 if (grid[x, y] == null)
                 {
                     if (grid[x, y - 1] != null && !grid[x, y - 1].isMoving)
@@ -66,13 +69,13 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                         grid[x, y - 1] = null;
                         grid[x, y].MoveTo(new Vector3(leftPosition + x * jellySize, topPosition - y * jellySize, 0));
                     }
-                    else if (x > 0 && grid[x - 1, y - 1] != null && !grid[x - 1, y - 1].isMoving)
+                    else if (x > 0 && grid[x - 1, y - 1] != null && grid[x - 1, y] != null && !grid[x - 1, y - 1].isMoving)
                     {
                         grid[x, y] = grid[x - 1, y - 1];
                         grid[x - 1, y - 1] = null;
                         grid[x, y].MoveTo(new Vector3(leftPosition + x * jellySize, topPosition - y * jellySize, 0));
                     }
-                    else if (x < colunsCount - 1 && grid[x + 1, y - 1] != null && !grid[x + 1, y - 1].isMoving)
+                    else if (x < colunsCount - 1 && grid[x + 1, y - 1] != null && grid[x + 1, y] && !grid[x + 1, y - 1].isMoving)
                     {
                         grid[x, y] = grid[x + 1, y - 1];
                         grid[x + 1, y - 1] = null;
@@ -83,8 +86,11 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         }
         if(replaceTimer < 0)
         {
-            for (int x = 0; x < colunsCount; x++)
+            int startPosition = Random.Range(0, colunsCount);
+            for (int _x = 0; _x < colunsCount; _x++)
             {
+                int x = (_x + startPosition) % colunsCount;
+
                 if (grid[x, 0] == null)
                 {
                     JellyController jelly = possibleJelly[Random.Range(0, possibleJelly.Count)].InstantiateGrid(this.transform);
