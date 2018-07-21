@@ -57,6 +57,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: {fileID: 0}
   isMoving: 0
+  isSelected: 0
+  animateRect: {fileID: 224577984469911678}
+  deltaSize: 0.15
 --- !u!114 &114685485377963266
 MonoBehaviour:
   m_ObjectHideFlags: 1

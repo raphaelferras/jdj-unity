@@ -145,7 +145,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d4030f8cf29a3fa42b169f7665432c98, type: 2}
   - {fileID: 11400000, guid: d60a2fd82d681874babc39f57c0965ce, type: 2}
   - {fileID: 11400000, guid: bb69a0c0a28ac3e4882d84c89863f31f, type: 2}
-  - {fileID: 11400000, guid: 14e13aed19a0ad941b35942160bace5f, type: 2}
   backgound: {fileID: 224604133904742046}
 --- !u!222 &222227350859562108
 CanvasRenderer:

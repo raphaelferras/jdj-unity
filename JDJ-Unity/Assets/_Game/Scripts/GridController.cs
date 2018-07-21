@@ -15,7 +15,12 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     public RectTransform backgound;
     private Rect bounds;
     private float replaceTimer;
+
     private JellyController[,] grid;
+    private bool[,] selected;
+    private PowerConfig selectedType;
+    private int lastSelectedX;
+    private int lastSelectedY;
 
     // Use this for initialization
     void Start () {
@@ -26,6 +31,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         float x = leftPosition;
         float y = topPosition;
         grid = new JellyController[colunsCount, rowsCount];
+        selected = new bool[colunsCount, rowsCount];
         for (int i = 0; i < rowsCount; i++, y -= jellySize)
         {
             for(int j =0; j < colunsCount; j++, x += jellySize)
@@ -33,6 +39,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 JellyController jelly = possibleJelly[Random.Range(0, possibleJelly.Count)].InstantiateGrid(this.transform);
                 jelly.SetPosition(new Vector3(x, y, 0));
                 grid[j, i] = jelly;
+                selected[j, i] = false;
             }
             x = leftPosition;
         }
@@ -41,6 +48,21 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
         Vector2 size = Vector2.Scale(backgound.rect.size, backgound.lossyScale);
         bounds =  new Rect((Vector2)backgound.position - (size * 0.5f), size);
+    }
+
+    private void RemoveGridSelection()
+    {
+        for (int i = 0; i < rowsCount; i++)
+        {
+            for (int j = 0; j < colunsCount; j++)
+            {
+                if (selected[j, i])
+                {
+                    selected[j, i] = false;
+                    grid[j, i].SetSelected(false);
+                }
+            }
+        }
     }
 
     void Update()
@@ -102,45 +124,77 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
             }
         }
-
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        Vector2 position = eventData.position;
-        if (bounds.Contains(position))
+        if(selectedType != null)
         {
-            float x = ((position.x - bounds.x) / bounds.width) * colunsCount;
-            float y = ((position.y - bounds.y) / bounds.height) * rowsCount;
+            HandleTouch(eventData);
         }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        HandleTouch(eventData);
+    }
+
+    private void HandleTouch(PointerEventData eventData)
+    {
         Vector2 position = eventData.position;
         if (bounds.Contains(position))
         {
-            float x = ((position.x - bounds.x) / bounds.width) * colunsCount;
-            float y = ((position.y - bounds.y) / bounds.height) * rowsCount;
+            int x, y;
+            GetPosition(position, out x, out y);
+            if (selectedType!= null && (Mathf.Abs(x-lastSelectedX) > 1 || Mathf.Abs(y - lastSelectedY) > 1))
+            {
+                return;
+            }
+            if (grid[x, y] != null && !grid[x, y].isMoving && !selected[x, y] && (selectedType == null || selectedType == grid[x, y].type))
+            {
+                lastSelectedX = x;
+                lastSelectedY = y;
+                selected[x, y] = true;
+                grid[x, y].SetSelected(true);
+                if (selectedType == null)
+                {
+                    selectedType = grid[x, y].type;
+                }
+            }
         }
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Vector2 position = eventData.position;
-        if (bounds.Contains(position))
+        if (selectedType != null)
         {
-            int x = (int)(((position.x - bounds.x) / bounds.width) * colunsCount);
-            int y = (int)(((position.y - bounds.y) / bounds.height) * rowsCount);
-            y = rowsCount - 1 - y;
-
-            if (grid[x,y] != null)
-            {
-                PowerController.Instance.Spawn((int)x, grid[x, y].type);
-                Destroy(grid[x, y].gameObject);
-            }
-            
-            Debug.Log("x: " + x + "  y: " + y);
+            PowerController.Instance.Spawn(lastSelectedX, selectedType);
+            ClearSelectedGrid();
         }
+        RemoveGridSelection();
+        selectedType = null;
+    }
+
+    private void ClearSelectedGrid()
+    {
+        for (int i = 0; i < rowsCount; i++)
+        {
+            for (int j = 0; j < colunsCount; j++)
+            {
+                if (selected[j, i])
+                {
+                    selected[j, i] = false;
+                    grid[j, i].SetSelected(false);
+                    Destroy(grid[j, i].gameObject);
+                }
+            }
+        }
+    }
+
+    private void GetPosition(Vector2 pos, out int x, out int y)
+    {
+        x = (int)(((pos.x - bounds.x) / bounds.width) * colunsCount);
+        y = (int)(((pos.y - bounds.y) / bounds.height) * rowsCount);
+        y = rowsCount - 1 - y;
     }
 }
