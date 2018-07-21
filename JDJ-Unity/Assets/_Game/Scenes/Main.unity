@@ -587,6 +587,8 @@ MonoBehaviour:
   jellySize: 75
   JellySpeed: 10
   jellyReplaceTimer: 0.5
+  defaultHealthBar: {fileID: 1277978512532226, guid: 57b860a14a860d742a2c6310e54b3778,
+    type: 2}
   floorPrefab: {fileID: 1867333762144184, guid: 85357c29bec629f49b442decae708ad3,
     type: 2}
   gridPrefab: {fileID: 1006787709415742, guid: 71daa7d240f21134492527ec9b238823, type: 2}

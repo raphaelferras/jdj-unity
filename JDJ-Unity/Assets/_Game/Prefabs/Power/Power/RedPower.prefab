@@ -36,8 +36,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4471541697205388}
+  - component: {fileID: 114574268934272046}
   - component: {fileID: 114359855170671086}
-  - component: {fileID: 114964849819881738}
   - component: {fileID: 135094883223904110}
   - component: {fileID: 54532651947909894}
   m_Layer: 9
@@ -149,7 +149,7 @@ MonoBehaviour:
   lanePos: 0
   lastMoveSet: 0
   power: 1
---- !u!114 &114964849819881738
+--- !u!114 &114574268934272046
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -157,9 +157,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586668995643970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6e230817d403341aa25818a5c494e0, type: 3}
+  m_Script: {fileID: 11500000, guid: b484bf9a1fedae54db7094ca6d3bdfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 60
 --- !u!135 &135094883223904110
 SphereCollider:
   m_ObjectHideFlags: 1

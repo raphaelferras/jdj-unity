@@ -304,17 +304,22 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Game\Scripts\DestroyOnTouch.cs" />
-    <Compile Include="Assets\_Game\Scripts\EnemyController.cs" />
-    <Compile Include="Assets\_Game\Scripts\GameMode.cs" />
-    <Compile Include="Assets\_Game\Scripts\GridController.cs" />
-    <Compile Include="Assets\_Game\Scripts\LanesController.cs" />
-    <Compile Include="Assets\_Game\Scripts\Monster.cs" />
-    <Compile Include="Assets\_Game\Scripts\MoveInLane.cs" />
-    <Compile Include="Assets\_Game\Scripts\Power\Fireball.cs" />
-    <Compile Include="Assets\_Game\Scripts\PowerController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\EnemyController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\GameMode.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\GridController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\PowerController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\DestroyOnTouch.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Enemy\Monster.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Health.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\HealthBarControl.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\IHitable.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\MoveInLane.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Fireball.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Power.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Power\PowerHitInfo.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
-    <Compile Include="Assets\_Game\Scripts\Singleton.cs" />
+    <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\JellyController.cs" />
   </ItemGroup>
   <ItemGroup>
