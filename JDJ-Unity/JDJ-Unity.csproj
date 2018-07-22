@@ -348,6 +348,7 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Fireball.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Power.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\PowerHitInfo.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Wall.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\PauseAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />

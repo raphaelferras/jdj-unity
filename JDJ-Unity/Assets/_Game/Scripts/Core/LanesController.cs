@@ -13,11 +13,14 @@ public class LanesController : MonoBehaviour {
     public float zposition = 25.5f;
     private float delta;
     public GameObject floor;
+    public GameObject wallPrefab;
     private GameObject[] lanes;
+    private Wall[] walls;
 
     // Use this for initialization
     void Start () {
         lanes = new GameObject[lanesCount];
+        walls = new Wall[lanesCount];
         float x = startPos;
         delta = (startPos * -2)/(lanesCount-1);
         float yPosition = GameMode.Instance.floorHeight;
@@ -37,6 +40,11 @@ public class LanesController : MonoBehaviour {
             scale.Set(delta, scale.y, scale.z);
             lane.transform.localScale = scale;
             lanes[i] = lane;
+            GameObject wall = Instantiate(wallPrefab, this.transform);
+            Vector3 posWall = wall.transform.position;
+            posWall.Set(x, posWall.y, posWall.z);
+            wall.transform.position = posWall;
+            walls[i] = wall.GetComponent<Wall>();
         }
         floor.transform.position = new Vector3(floor.transform.position.x, yPosition - 0.05f, floor.transform.position.z);
         highlight = Instantiate(highlight, this.transform);
@@ -76,5 +84,13 @@ public class LanesController : MonoBehaviour {
     public void RemoveHightlight()
     {
         highlight.SetActive(false);
+    }
+
+    public void Attack(int lane, int size, int damage)
+    {
+        for(int i = lane; i < lane+size; i++)
+        {
+            walls[i].Hit(damage);
+        }
     }
 }

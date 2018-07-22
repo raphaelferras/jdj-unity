@@ -836,6 +836,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95616631545164150}
+  damage: 10
+  attackInterval: 2
 --- !u!137 &137915551525234940
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
