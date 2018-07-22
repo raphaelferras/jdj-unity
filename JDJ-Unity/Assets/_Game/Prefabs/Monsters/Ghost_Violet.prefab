@@ -144,6 +144,8 @@ GameObject:
   - component: {fileID: 114358527529006420}
   - component: {fileID: 114973280775019844}
   - component: {fileID: 65818388792632230}
+  - component: {fileID: 114953615735162164}
+  - component: {fileID: 114947280634468060}
   m_Layer: 8
   m_Name: Ghost_Violet
   m_TagString: Untagged
@@ -434,6 +436,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95233764508257882}
+--- !u!114 &114947280634468060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788532388268766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db412c77efe3e64b8456366194065d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114953615735162164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1788532388268766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e4e359bdb5ac94d896063425b0333d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  hp: 0
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  death:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114973280775019844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,12 +481,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.08
+  speed: 8
   lanesSize: 1
   lane: 0
   position: 0
   lanePos: 0
   lastMoveSet: 0
+  power: 0
 --- !u!137 &137248833328337848
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

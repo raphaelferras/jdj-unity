@@ -564,6 +564,8 @@ GameObject:
   - component: {fileID: 114514777690400676}
   - component: {fileID: 114718379839182016}
   - component: {fileID: 65463205680215258}
+  - component: {fileID: 114540463169229080}
+  - component: {fileID: 114221633492296592}
   m_Layer: 8
   m_Name: Boss
   m_TagString: Untagged
@@ -850,7 +852,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1251236605141724}
-  m_LocalRotation: {x: 0.4956177, y: 0.4956177, z: 0.5043442, w: 0.5043442}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0.13}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
@@ -859,7 +861,7 @@ Transform:
   - {fileID: 4753567291495156}
   m_Father: {fileID: 4847343588326112}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 89, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4352550811220610
 Transform:
   m_ObjectHideFlags: 1
@@ -1127,7 +1129,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1897240651250048}
-  m_LocalRotation: {x: -0.50000036, y: 0.49999964, z: 0.49999964, w: 0.50000036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1267,6 +1269,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114221633492296592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897240651250048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9db412c77efe3e64b8456366194065d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114514777690400676
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1278,13 +1291,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 3
   lanesSize: 2
   lane: 0
   position: 0
   lanePos: 0
   lastMoveSet: 0
   power: 0
+--- !u!114 &114540463169229080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1897240651250048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37e4e359bdb5ac94d896063425b0333d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  hp: 0
+  healthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  death:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114718379839182016
 MonoBehaviour:
   m_ObjectHideFlags: 1
