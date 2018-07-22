@@ -5,7 +5,11 @@ using UnityEngine;
 public class Monster : IHitable
 {
     public Animator animator;
+    public int damage;
+    public float attackInterval;
+    private float attackTimer;
     private Health health;
+    private MoveInLane move;
 
     private const string MOVE_BOOL = "Move";
     private const string ATTACK_TRIGGER = "Attack";
@@ -15,6 +19,8 @@ public class Monster : IHitable
     private void Start()
     {
         health = GetComponent<Health>();
+        move = GetComponent<MoveInLane>();
+        attackTimer = 0.0f;
     }
 
     public void SetMove(bool value)
@@ -27,9 +33,15 @@ public class Monster : IHitable
 
     public void Attack()
     {
+        attackTimer -= Time.deltaTime;
         if (animator != null)
         {
             animator.SetTrigger(ATTACK_TRIGGER);
+        }
+        if(attackTimer < 0)
+        {
+            attackTimer += attackInterval;
+            GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);
         }
     }
 

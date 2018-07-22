@@ -695,6 +695,8 @@ MonoBehaviour:
   lanePrefab: {fileID: 1074448918892030, guid: 38610d61cb21acd45852e375a144e3c6, type: 2}
   lanePrefab2: {fileID: 1498045051436594, guid: 73efef4e25670d946a34c811d71c63ed,
     type: 2}
+  highlight: {fileID: 1498045051436594, guid: 48f0f0a0ac43930498b61d439727cc75, type: 2}
   startPos: -2
   zposition: 25.5
   floor: {fileID: 1934467531080694}
+  wallPrefab: {fileID: 1171791876122964, guid: 8ea1c121ec22f4f4cbcf13187f6f16e9, type: 2}
