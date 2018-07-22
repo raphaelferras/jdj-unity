@@ -67,6 +67,10 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     void Update()
     {
+        if (GameState.Instance.CurrentState() != GameState.State.GAME)
+        {
+            return;
+        }
         CheckJellyReplace();
     }
 
@@ -128,7 +132,11 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     public void OnDrag(PointerEventData eventData)
     {
-        if(selectedType != null)
+        if (GameState.Instance.CurrentState() != GameState.State.GAME)
+        {
+            return;
+        }
+        if (selectedType != null)
         {
             HandleTouch(eventData);
         }
@@ -136,6 +144,10 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (GameState.Instance.CurrentState() != GameState.State.GAME)
+        {
+            return;
+        }
         HandleTouch(eventData);
     }
 
@@ -166,6 +178,10 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (GameState.Instance.CurrentState() != GameState.State.GAME)
+        {
+            return;
+        }
         if (selectedType != null)
         {
             PowerController.Instance.Spawn(lastSelectedX, selectedType);

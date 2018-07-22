@@ -50,7 +50,7 @@ public class MoveInLane : MonoBehaviour {
 
     private void Update()
     {
-        position -= speed;
+        position -= speed*Time.deltaTime;
         if (position <= endPos)
         {
             position = endPos;

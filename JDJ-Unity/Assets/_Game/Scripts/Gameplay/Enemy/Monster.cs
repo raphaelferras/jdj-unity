@@ -39,7 +39,7 @@ public class Monster : IHitable
         {
             animator.SetTrigger(DIE_TRIGGER);
         }
-        Destroy(this.gameObject, 3.0f);
+        Destroy(this.gameObject, 1.0f);
         Destroy(this);
         Destroy(GetComponent<MoveInLane>());
         Destroy(GetComponent<BoxCollider>());

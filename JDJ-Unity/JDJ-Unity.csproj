@@ -306,7 +306,9 @@
   <ItemGroup>
     <Compile Include="Assets\_Game\Scripts\Core\EnemyController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\GameMode.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\GameState.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\GridController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\JellyController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\LanesController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\PowerController.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\DestroyOnTouch.cs" />
@@ -319,12 +321,16 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Power.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\PowerHitInfo.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\PauseAction.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
-    <Compile Include="Assets\JellyController.cs" />
+    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
+    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
