@@ -14,7 +14,7 @@ public class HealthBarControl : MonoBehaviour {
         health  = GetComponent<Health>();
         health.healthChanged.AddListener(HealthValueChanged);
         float p = health.GetPercent();
-        if (p > 0.999f)
+        if (p > 0.999f || p < 0.0001f)
         {
             sliderObj.SetActive(false);
         } else
@@ -27,7 +27,7 @@ public class HealthBarControl : MonoBehaviour {
 	private void HealthValueChanged()
     {
         float p = health.GetPercent();
-        if (p > 0.999f)
+        if (p > 0.999f || p < 0.0001f)
         {
             sliderObj.SetActive(false);
         }

@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6800202F-4402-D405-F8CB-03DC7BD78B92}</ProjectGuid>
+    <ProjectGuid>{C276BA28-4F02-D404-7E59-C154E78AF69A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>UnityEditor.StandardEvents</AssemblyName>
+    <AssemblyName>com.unity.render-pipelines.core.Runtime</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile>
     </CompilerResponseFile>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.1.6f1</UnityVersion>
     <RootNamespace>
@@ -316,35 +316,101 @@
       <HintPath>C:/Program Files/Unity-2018/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Core.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.Linq.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript.Lang">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.Lang.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\Boo.Lang.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
+    <ProjectReference Include="com.unity.postprocessing.Runtime.csproj">
+      <Project>{43CE4B77-0ED1-06DF-D6D8-916516C0693A}</Project>
+      <Name>com.unity.postprocessing.Runtime</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Camera\CameraSwitcher.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Camera\FreeCamera.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\CommandBufferPool.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\ComponentSingleton.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\CoreResources\GPUCopy.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\CoreResources\GPUCopyAsset.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\CoreUtils.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugManager.Actions.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugManager.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugUI.Containers.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugUI.Fields.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugUI.Panel.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\DebugUpdater.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerButton.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerCanvas.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerColor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerContainer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerEnumField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerFloatField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerFoldout.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerGroup.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerHBox.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerIndirectFloatField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerIntField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerPanel.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerPersistentCanvas.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerToggle.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerUIntField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerValue.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerVBox.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerVector2.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerVector3.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerVector4.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\DebugUIHandlerWidget.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Debugging\Prefabs\Scripts\UIFoldout.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\DelegateUtility.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\EncodeBC6H.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\GeometryUtils.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Inputs\InputRegistering.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\MousePositionDebug.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\ObservableList.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\ProfilingSample.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\RTHandle.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\SceneRenderPipeline.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\SerializedDictionary.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\ShaderGenerator\ShaderGeneratorAttributes.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Shadow\AdditionalShadowData.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Shadow\Shadow.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Shadow\ShadowBase.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Shadow\ShadowUtilities.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Shadow\VectorArray.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Singleton.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\TextureCache.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\TextureSettings.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\Volume.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\VolumeComponent.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\VolumeManager.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\VolumeParameter.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\VolumeProfile.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Volume\VolumeStack.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />

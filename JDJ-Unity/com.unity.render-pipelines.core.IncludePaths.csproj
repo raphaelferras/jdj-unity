@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6800202F-4402-D405-F8CB-03DC7BD78B92}</ProjectGuid>
+    <ProjectGuid>{F2B70288-84D1-5F1A-592D-AFB0D48FEE35}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>UnityEditor.StandardEvents</AssemblyName>
+    <AssemblyName>com.unity.render-pipelines.core.IncludePaths</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -15,7 +15,7 @@
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile>
     </CompilerResponseFile>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.1.6f1</UnityVersion>
     <RootNamespace>
@@ -344,7 +344,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@1.1.11-preview\CoreRP\Editor\IncludePaths\CoreShaderIncludePaths.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />

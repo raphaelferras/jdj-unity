@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6800202F-4402-D405-F8CB-03DC7BD78B92}</ProjectGuid>
+    <ProjectGuid>{43CE4B77-0ED1-06DF-D6D8-916516C0693A}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>UnityEditor.StandardEvents</AssemblyName>
+    <AssemblyName>com.unity.postprocessing.Runtime</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
     <CompilerResponseFile>
     </CompilerResponseFile>
-    <UnityProjectType>Editor:5</UnityProjectType>
+    <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>Android:13</UnityBuildTarget>
     <UnityVersion>2018.1.6f1</UnityVersion>
     <RootNamespace>
@@ -316,35 +316,90 @@
       <HintPath>C:/Program Files/Unity-2018/Editor/Data/PlaybackEngines/iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\mscorlib.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\mscorlib.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.dll</HintPath>
     </Reference>
     <Reference Include="System.Core">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Core.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Runtime.Serialization.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\System.Xml.Linq.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll</HintPath>
     </Reference>
     <Reference Include="UnityScript.Lang">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\UnityScript.Lang.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Boo.Lang">
-      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\2.0-api\Boo.Lang.dll</HintPath>
+      <HintPath>C:\Program Files\Unity-2018\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\DisplayNameAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\MaxAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\MinMaxAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\PostProcessAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\AmbientOcclusion.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\AutoExposure.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\Bloom.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\ChromaticAberration.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\ColorGrading.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\DepthOfField.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\Dithering.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\FastApproximateAntialiasing.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\Fog.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\Grain.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\LensDistortion.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\MotionBlur.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\MultiScaleVO.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\ScalableAO.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\ScreenSpaceReflections.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\SubpixelMorphologicalAntialiasing.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\TemporalAntialiasing.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Effects\Vignette.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Monitors\HistogramMonitor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Monitors\LightMeterMonitor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Monitors\Monitor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Monitors\VectorscopeMonitor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Monitors\WaveformMonitor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\ParameterOverride.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessBundle.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessDebug.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessDebugLayer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessEffectRenderer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessEffectSettings.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessEvent.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessLayer.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessManager.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessProfile.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessRenderContext.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessResources.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\PostProcessVolume.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\ColorUtilities.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\HableCurve.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\HaltonSeq.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\LogHistogram.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\MeshUtilities.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\PropertySheet.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\PropertySheetFactory.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\RuntimeUtilities.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\ShaderIDs.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\Spline.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\TargetPool.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\TextureFormatUtilities.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\TextureLerper.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Runtime\Utils\XRSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />

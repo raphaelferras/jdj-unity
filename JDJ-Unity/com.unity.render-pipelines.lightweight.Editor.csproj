@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6800202F-4402-D405-F8CB-03DC7BD78B92}</ProjectGuid>
+    <ProjectGuid>{25FA35B5-DEC0-BCD5-8F44-0EDB11064891}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>UnityEditor.StandardEvents</AssemblyName>
+    <AssemblyName>com.unity.render-pipelines.lightweight.Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
@@ -344,7 +344,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.standardevents@1.0.13\Editor\Importer.cs" />
+    <ProjectReference Include="com.unity.render-pipelines.core.Runtime.csproj">
+      <Project>{C276BA28-4F02-D404-7E59-C154E78AF69A}</Project>
+      <Name>com.unity.render-pipelines.core.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.render-pipelines.core.Editor.csproj">
+      <Project>{E14A6FCC-D8BF-2DA1-0326-17E09C5E0AA1}</Project>
+      <Name>com.unity.render-pipelines.core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.render-pipelines.lightweight.Runtime.csproj">
+      <Project>{27C5C58A-1D35-74B6-772E-FFF4901A4088}</Project>
+      <Name>com.unity.render-pipelines.lightweight.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.postprocessing.Runtime.csproj">
+      <Project>{43CE4B77-0ED1-06DF-D6D8-916516C0693A}</Project>
+      <Name>com.unity.postprocessing.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="com.unity.postprocessing.Editor.csproj">
+      <Project>{8C3967EF-EA5C-CD2A-F191-ADB2A5FEC7D2}</Project>
+      <Name>com.unity.postprocessing.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
+      <Project>{097081EC-B172-781E-F676-D45E858A96D6}</Project>
+      <Name>Unity.ShaderGraph.Editor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\LightweightAssetEditor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\LightweightCameraEditor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\LightweightLightEditor.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\LightweightMaterialUpgrader.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\LightweightShaderIncludePaths.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGraph\LightWeightPBRSubShader.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGraph\LightWeightUnlitSubShader.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGUI\LightweightShaderGUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGUI\LightweightStandardGUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGUI\LightweightStandardParticlesShaderGUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGUI\LightweightStandardSimpleLightingGUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\ShaderGUI\LightweightUnlitGUI.cs" />
+    <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@1.1.11-preview\LWRP\Editor\UpgradeCommon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
