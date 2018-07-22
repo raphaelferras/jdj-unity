@@ -21,6 +21,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     private PowerConfig selectedType;
     private int lastSelectedX;
     private int lastSelectedY;
+    private int selectCount;
 
     // Use this for initialization
     void Start () {
@@ -48,6 +49,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
         Vector2 size = Vector2.Scale(backgound.rect.size, backgound.lossyScale);
         bounds =  new Rect((Vector2)backgound.position - (size * 0.5f), size);
+        selectCount = 0;
     }
 
     private void RemoveGridSelection()
@@ -63,6 +65,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
             }
         }
+        selectCount = 0;
     }
 
     void Update()
@@ -167,6 +170,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 lastSelectedX = x;
                 lastSelectedY = y;
                 selected[x, y] = true;
+                selectCount++;
                 grid[x, y].SetSelected(true);
                 if (selectedType == null)
                 {
@@ -184,8 +188,11 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         }
         if (selectedType != null)
         {
-            PowerController.Instance.Spawn(lastSelectedX, selectedType);
-            ClearSelectedGrid();
+            if (selectCount >= 3)
+            {
+                PowerController.Instance.Spawn(lastSelectedX, selectedType, selectCount -2);
+                ClearSelectedGrid();
+            }
         }
         RemoveGridSelection();
         selectedType = null;
@@ -205,6 +212,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
             }
         }
+        selectCount = 0;
     }
 
     private void GetPosition(Vector2 pos, out int x, out int y)
