@@ -561,8 +561,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4847343588326112}
-  - component: {fileID: 114514777690400676}
   - component: {fileID: 114718379839182016}
+  - component: {fileID: 114514777690400676}
   - component: {fileID: 65463205680215258}
   - component: {fileID: 114540463169229080}
   - component: {fileID: 114221633492296592}
@@ -1333,8 +1333,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95180646874251888}
-  damage: 30
-  attackInterval: 5
+  damage: 25
+  attackInterval: 3
 --- !u!137 &137159864192275820
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
