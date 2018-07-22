@@ -27,7 +27,7 @@ public class LanesController : MonoBehaviour {
                 lane = Instantiate(lanePrefab2, this.transform);
             }
             Vector3 pos = lane.transform.position;
-            pos.Set(x, yPosition, zposition);
+            pos.Set(x, yPosition - 0.04f, zposition);
             lane.transform.position = pos;
             Vector3 scale = lane.transform.localScale;
             scale.Set(delta, scale.y, scale.z);
