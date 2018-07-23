@@ -436,8 +436,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95233764508257882}
-  damage: 10
-  attackInterval: 2
+  damage: 8
+  attackInterval: 1.6
 --- !u!114 &114947280634468060
 MonoBehaviour:
   m_ObjectHideFlags: 1
