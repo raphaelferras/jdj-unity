@@ -93,4 +93,12 @@ public class LanesController : MonoBehaviour {
             walls[i].Hit(damage);
         }
     }
+
+    public void Heal(int lane, int size, int heal)
+    {
+        for (int i = lane; i < lane + size; i++)
+        {
+            walls[i].Heal(heal);
+        }
+    }
 }

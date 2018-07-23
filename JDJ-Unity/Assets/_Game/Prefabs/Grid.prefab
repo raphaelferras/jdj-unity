@@ -266,9 +266,9 @@ MonoBehaviour:
   rowsCount: 5
   topPosition: -50
   possibleJelly:
-  - {fileID: 11400000, guid: d4030f8cf29a3fa42b169f7665432c98, type: 2}
+  - {fileID: 11400000, guid: e71e78cb60fb1254c82f275b0e49ddaa, type: 2}
   - {fileID: 11400000, guid: d60a2fd82d681874babc39f57c0965ce, type: 2}
-  - {fileID: 11400000, guid: bb69a0c0a28ac3e4882d84c89863f31f, type: 2}
+  - {fileID: 11400000, guid: d4030f8cf29a3fa42b169f7665432c98, type: 2}
   backgound: {fileID: 224604133904742046}
   jellyContainer: {fileID: 1119323749125382}
   jellyCounter: {fileID: 1898590670103568}

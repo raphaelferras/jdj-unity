@@ -4,14 +4,10 @@ using UnityEngine;
 
 public class UIController : Singleton<UIController> {
 
-    public GameObject pause_Panel;
+    public GameObject pausePanel;
+    public GameObject losePanel;
     public GameObject HUD_Panel;
 
-    // Use this for initialization
-    void Start () {
-		
-	}
-	
 	// Update is called once per frame
 	void Update () {
         UpdateItensVisibility();
@@ -20,7 +16,8 @@ public class UIController : Singleton<UIController> {
     public void UpdateItensVisibility()
     {
         GameState.State currentState = GameState.Instance.CurrentState();
-        pause_Panel.SetActive(currentState == GameState.State.PAUSE);
+        pausePanel.SetActive(currentState == GameState.State.PAUSE);
+        losePanel.SetActive(currentState == GameState.State.LOSE);
         HUD_Panel.SetActive(currentState == GameState.State.GAME);
     }
 }
