@@ -47,6 +47,7 @@ TextureImporter:
     21300084: Red
     21300086: yellow
     21300088: blue
+    21300090: green_jelly_texture
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -157,7 +158,7 @@ TextureImporter:
         width: 101
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -177,7 +178,7 @@ TextureImporter:
         width: 697
         height: 103
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,7 +198,7 @@ TextureImporter:
         width: 97
         height: 101
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,7 +218,7 @@ TextureImporter:
         width: 100
         height: 101
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -237,13 +238,33 @@ TextureImporter:
         width: 101
         height: 102
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: fb47a2b5831b4964696b3c51b28c3af2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: green_jelly_texture
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 308
+        width: 100
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7754bbf485c2fd048ab1cdf72be6351b
       vertices: []
       indices: 
       edges: []

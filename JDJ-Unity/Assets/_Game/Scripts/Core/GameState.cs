@@ -33,11 +33,11 @@ public class GameState : Singleton<GameState> {
 
     public void Win()
     {
-        currentState = State.GAME;
+        currentState = State.WIN;
     }
 
     public void Lose()
     {
-        currentState = State.GAME;
+        currentState = State.LOSE;
     }
 }

@@ -188,7 +188,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
                 jellyCounter.SetActive(true);
                 jellyCounter.GetComponentInChildren<Text>().text = selectCount.ToString();
-                jellyCounter.transform.position = grid[x, y].transform.position;
+                jellyCounter.transform.position = grid[x, y].transform.position + Vector3.up*(jellySize / 2.0f);
             }
         }
     }

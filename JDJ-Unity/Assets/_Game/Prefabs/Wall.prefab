@@ -223,4 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallBottom: {fileID: 1876264124489074}
   wallTop: {fileID: 1822501442686546}
-  particle: {fileID: 1470315990794730, guid: a1b2c17dd963c9640a0af1590955d09a, type: 2}
+  damageParticle: {fileID: 1470315990794730, guid: a1b2c17dd963c9640a0af1590955d09a,
+    type: 2}
+  healParticle: {fileID: 1757649635297568, guid: ced251eb705f22145b592b1825dc674b,
+    type: 2}
