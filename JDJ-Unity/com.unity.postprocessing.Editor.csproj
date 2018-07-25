@@ -390,6 +390,13 @@
     <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
     <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
     <None Include="Assets\Simple UI\Fonts\OFL.txt" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\Editor\Resources\CMWaveform.compute" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\Editor\Resources\CMWaveform.shader" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\Editor\Resources\StdLib.hlsl" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\Editor\com.unity.cinemachine.Editor.asmdef" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\ReleaseNotes.txt" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\Runtime\com.unity.cinemachine.asmdef" />
+    <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.cinemachine@2.2.0\license.txt" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.package-manager-ui@1.8.8\Editor\Resources\Templates\Alert.uxml" />
