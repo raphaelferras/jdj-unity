@@ -18,7 +18,6 @@ public class CameraController : Singleton<CameraController> {
 
     public void SetPosition(float delta)
     {
-        Debug.Log(position);
         position += delta;
         if(position < path.MinPos)
         {
