@@ -24,9 +24,16 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     private int selectCount;
     public GameObject jellyContainer;
     public GameObject jellyCounter;
+    public Vector3 counterDeltaPosition;
+
+    private float canvasWidth;
+    private float canvasHeight;
 
     // Use this for initialization
     void Start () {
+        RectTransform dimensions = GetComponent<RectTransform>();
+        canvasWidth = dimensions.rect.width;
+        canvasHeight = dimensions.rect.height;
         replaceTimer = -1;
         jellySize = GameMode.Instance.jellySize;
         leftPosition = ((colunsCount-1) * jellySize / 2);
@@ -50,7 +57,9 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         backgound.sizeDelta = new Vector2(jellySize* colunsCount, jellySize* rowsCount);
 
         Vector2 size = Vector2.Scale(backgound.rect.size, backgound.lossyScale);
+        size = backgound.rect.size;
         bounds =  new Rect((Vector2)backgound.position - (size * 0.5f), size);
+        bounds.y = backgound.offsetMin.y;
         selectCount = 0;
         jellyCounter.SetActive(false);
     }
@@ -162,7 +171,12 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     private void HandleTouch(PointerEventData eventData)
     {
-        Vector2 position = eventData.position;
+        Vector2 position22 = eventData.position;
+        // position.x -= Screen.width / 2;
+        //position.y -= Screen.height / 2;
+        Vector2 position = GetScaledTouch(position22);
+        Debug.Log("position: " + position + "bounds: " + bounds);
+
         if (bounds.Contains(position))
         {
             int x, y;
@@ -188,9 +202,17 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 }
                 jellyCounter.SetActive(true);
                 jellyCounter.GetComponentInChildren<Text>().text = selectCount.ToString();
-                jellyCounter.transform.position = grid[x, y].transform.position + Vector3.up*(jellySize / 2.0f);
+                jellyCounter.GetComponent<RectTransform>().position = grid[x, y].transform.position + counterDeltaPosition*jellySize;
+                
             }
         }
+    }
+
+
+    private Vector2 GetScaledTouch(Vector2 pos)
+    {
+        return new Vector2(((pos.x* canvasWidth)/Screen.width) - (canvasWidth / 2.0f),
+            ((pos.y * canvasHeight) / Screen.height) - (canvasHeight / 2.0f));
     }
 
     public void OnPointerUp(PointerEventData eventData)
