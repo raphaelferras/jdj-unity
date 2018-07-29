@@ -31,14 +31,37 @@ public class Monster : IHitable
         }
     }
 
+    public void Update()
+    {
+        if(attackTimer > 0)
+        {
+            attackTimer -= Time.deltaTime;
+        } else
+        {
+            attackTimer = -0.00001f;
+        }
+    }
+
     public void Attack()
     {
-        attackTimer -= Time.deltaTime;
         if (animator != null)
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
-        if(attackTimer < 0)
+        if (attackTimer < 0)
+        {
+            attackTimer += attackInterval;
+            GameState.Instance.Lose();
+        }
+    }
+
+    public void AttackWall()
+    {
+        if (animator != null)
+        {
+            animator.SetTrigger(ATTACK_TRIGGER);
+        }
+        if (attackTimer < 0)
         {
             attackTimer += attackInterval;
             GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);

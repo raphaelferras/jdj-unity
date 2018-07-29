@@ -17,6 +17,7 @@ public class MoveInLane : MonoBehaviour {
 
     public bool lastMoveSet;
     public bool power;
+    public float wallPosition;
 
     private void Start()
     {
@@ -31,6 +32,7 @@ public class MoveInLane : MonoBehaviour {
         }
         endPos = GameMode.Instance.endLanePosition;
         lanePos = GameMode.Instance.lanes.GetXPosition(lane, lanesSize);
+        wallPosition = GameMode.Instance.lanes.zWallPosition;
         yPosition = GameMode.Instance.floorHeight;
         this.transform.position = new Vector3(lanePos, yPosition, position);
         monster = GetComponent<Monster>();
@@ -50,7 +52,18 @@ public class MoveInLane : MonoBehaviour {
 
     private void Update()
     {
-        position -= speed*Time.deltaTime;
+        float delta = speed * Time.deltaTime;
+        if (position > wallPosition && position - delta < wallPosition && GameMode.Instance.lanes.HasWall(lane,lanesSize))
+        {
+            if (lastMoveSet != false)
+            {
+                monster.SetMove(false);
+                lastMoveSet = false;
+            }
+            monster.AttackWall();
+            return;
+        }
+        position -= delta;
         if (position <= endPos)
         {
             position = endPos;

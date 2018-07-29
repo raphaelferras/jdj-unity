@@ -700,3 +700,4 @@ MonoBehaviour:
   zposition: 25.5
   floor: {fileID: 1934467531080694}
   wallPrefab: {fileID: 1171791876122964, guid: 8ea1c121ec22f4f4cbcf13187f6f16e9, type: 2}
+  zWallPosition: 6.2

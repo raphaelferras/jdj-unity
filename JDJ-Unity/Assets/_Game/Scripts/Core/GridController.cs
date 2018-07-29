@@ -18,6 +18,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     private JellyController[,] grid;
     private bool[,] selected;
+    private Vector2Int[,] previous;
     private PowerConfig selectedType;
     private int lastSelectedX;
     private int lastSelectedY;
@@ -44,6 +45,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         float y = topPosition;
         grid = new JellyController[colunsCount, rowsCount];
         selected = new bool[colunsCount, rowsCount];
+        previous = new Vector2Int[colunsCount, rowsCount];
         for (int i = 0; i < rowsCount; i++, y -= jellySize)
         {
             for(int j =0; j < colunsCount; j++, x += jellySize)
@@ -56,7 +58,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
             x = leftPosition;
         }
         backgound.localPosition = new Vector3(0, topPosition-((rowsCount-1)/2.0f)*jellySize, 0);
-        backgound.sizeDelta = new Vector2(jellySize* colunsCount, jellySize* rowsCount);
+        backgound.sizeDelta = new Vector2(jellySize * colunsCount, jellySize * rowsCount);
 
         Vector2 size = Vector2.Scale(backgound.rect.size, backgound.lossyScale);
         size = backgound.rect.size;
@@ -64,6 +66,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         bounds.y = backgound.offsetMin.y;
         selectCount = 0;
         jellyCounter.SetActive(false);
+        lastSelectedX = -1;
     }
 
     private void RemoveGridSelection()
@@ -83,7 +86,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         GameMode.Instance.lanes.RemoveHightlight();
         jellyCounter.SetActive(false);
         ClearPath();
-
+        lastSelectedX = -1;
     }
 
     void Update()
@@ -180,12 +183,34 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         {
             int x, y;
             GetPosition(position, out x, out y);
+            if (lastSelectedX != -1 && previous[lastSelectedX, lastSelectedY].x == x && previous[lastSelectedX, lastSelectedY].y == y)
+            {
+                selectCount--;
+                selected[lastSelectedX, lastSelectedY] = false;
+                grid[lastSelectedX, lastSelectedY].SetSelected(false);
+                RemoveLastPathPosition();
+                if (selectCount >= 3)
+                {
+                    GameMode.Instance.lanes.Hightlight(x);
+                }
+                else
+                {
+                    GameMode.Instance.lanes.RemoveHightlight();
+                }
+                jellyCounter.SetActive(true);
+                jellyCounter.GetComponentInChildren<Text>().text = selectCount.ToString();
+                jellyCounter.GetComponent<RectTransform>().position = grid[x, y].transform.position + counterDeltaPosition * jellySize;
+                lastSelectedX = x;
+                lastSelectedY = y;
+            }
             if (selectedType!= null && (Mathf.Abs(x-lastSelectedX) > 1 || Mathf.Abs(y - lastSelectedY) > 1))
             {
                 return;
             }
             if (grid[x, y] != null && !grid[x, y].isMoving && !selected[x, y] && (selectedType == null || selectedType == grid[x, y].type))
             {
+                previous[x, y].x = lastSelectedX;
+                previous[x, y].y = lastSelectedY;
                 lastSelectedX = x;
                 lastSelectedY = y;
                 selected[x, y] = true;
@@ -203,7 +228,6 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 jellyCounter.SetActive(true);
                 jellyCounter.GetComponentInChildren<Text>().text = selectCount.ToString();
                 jellyCounter.GetComponent<RectTransform>().position = grid[x, y].transform.position + counterDeltaPosition*jellySize;
-                
             }
         }
     }
@@ -248,6 +272,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
             }
         }
         selectCount = 0;
+        lastSelectedX = -1;
     }
 
     private void GetPosition(Vector2 pos, out int x, out int y)
@@ -266,5 +291,10 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     {
         glowPath.positionCount+= 1;
         glowPath.SetPosition(glowPath.positionCount - 1, position);
+    }
+
+    private void RemoveLastPathPosition()
+    {
+        glowPath.positionCount-=1;
     }
 }

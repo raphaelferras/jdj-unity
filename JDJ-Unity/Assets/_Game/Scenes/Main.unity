@@ -2012,7 +2012,7 @@ MonoBehaviour:
   - {fileID: 1897240651250048, guid: 1ddba9e3da3af024d8cf2b6b3ffe279b, type: 2}
   - {fileID: 1887481297582568, guid: 5ac2c7840f9ad6e4da3f197e8b8a74fc, type: 2}
   - {fileID: 1106225941831646, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
-  deltaTime: 3.5
+  deltaTime: 5
 --- !u!4 &800339940
 Transform:
   m_ObjectHideFlags: 0
