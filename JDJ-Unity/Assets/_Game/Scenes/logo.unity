@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -295,6 +295,36 @@ Prefab:
     - target: {fileID: 4464839139129286, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -2.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 114756475601594574, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114682837777685688, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65241011104382988, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114167134872922354, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114283346222175972, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95309473846717546, guid: bb9918ff42547274296b6fb7fe0e90f5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb9918ff42547274296b6fb7fe0e90f5, type: 2}
@@ -534,6 +564,31 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -4.9
       objectReference: {fileID: 0}
+    - target: {fileID: 114358527529006420, guid: c57f0c24ae950d34ebe1461abadb00d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114973280775019844, guid: c57f0c24ae950d34ebe1461abadb00d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65818388792632230, guid: c57f0c24ae950d34ebe1461abadb00d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114953615735162164, guid: c57f0c24ae950d34ebe1461abadb00d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114947280634468060, guid: c57f0c24ae950d34ebe1461abadb00d0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c57f0c24ae950d34ebe1461abadb00d0, type: 2}
   m_IsPrefabParent: 0
@@ -588,7 +643,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 101
+  field of view: 97
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -681,6 +736,31 @@ Prefab:
     - target: {fileID: 4379787895832718, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 6.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114082741198424778, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187992970144428, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 65877232846444196, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114270684257923126, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114927317762940596, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a41e7c0c7efbc454fa8817e7f2b0f3f8, type: 2}

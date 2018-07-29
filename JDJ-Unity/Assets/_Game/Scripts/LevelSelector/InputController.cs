@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour {
 
+    public float swipeSpeed = 0.1f;
+    public float maxTimeForClick = 0.2f;
+
+
     private Vector3 lastMousePosition;
     private bool isMoving = false;
+    private float startMovingTime;
+
 	// Update is called once per frame
 	void Update () {
         if (isMoving)
         {
-            float delta = (lastMousePosition - Input.mousePosition).y / 200.0f;
+            float delta = ((lastMousePosition - Input.mousePosition).y) * swipeSpeed;
             //Debug.Log(delta);
             CameraController.Instance.SetPosition(delta);
         }
@@ -20,24 +26,35 @@ public class InputController : MonoBehaviour {
         {
             lastMousePosition = Input.mousePosition;
             isMoving = true;
+            startMovingTime = Time.time;
         }
         if (Input.GetMouseButtonUp(0))
         {
             lastMousePosition = Input.mousePosition;
+            if(Time.time - startMovingTime < maxTimeForClick)
+            {
+                HandleClick(lastMousePosition);
+            }
             isMoving = false;
         }
 
-        if (Input.touchCount > 0)
-        {
-            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
-            {
-                // Get movement of the finger since last frame
-                Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
 
-                // Move object across XY plane
-                Debug.Log("Test!");
-            }
 
-        }
 	}
+
+    private void HandleClick(Vector2 position)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(position);
+        // Create a particle if hit
+        RaycastHit hitInfo;
+        if (Physics.Raycast(ray, out hitInfo, 100))
+        {
+            IClickable obj = hitInfo.collider.GetComponent<IClickable>();
+            if (obj != null)
+            {
+                obj.OnClickObject();
+            }
+        }
+            
+    }
 }

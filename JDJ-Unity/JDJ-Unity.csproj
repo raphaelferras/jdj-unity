@@ -366,9 +366,10 @@
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\RetryAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\StartGame.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\IClickable.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\LevelSign.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
-    <Compile Include="Assets\SetCanvasCamera.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
   </ItemGroup>
   <ItemGroup>

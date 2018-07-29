@@ -7,27 +7,41 @@ public class CameraController : Singleton<CameraController> {
 
     CinemachineSmoothPath path;
     private GameObject cam;
-    float position = 0f;
-	// Use this for initialization
-	void Start () {
+    private float position = 0f;
+    private float targetPosition = 0f;
+    public float hysteresis;
+    // Use this for initialization
+    void Start () {
         path = GetComponent<CinemachineSmoothPath>();
         cam = Camera.main.gameObject;
         cam.transform.position = path.EvaluatePosition(position);
 
     }
 
+    private void Update()
+    {
+        SetCameraPosition();
+    }
+
+    private void SetCameraPosition()
+    {
+        position += (targetPosition - position) * hysteresis;
+
+        cam.transform.position = path.EvaluatePosition(position);
+
+    }
+
     public void SetPosition(float delta)
     {
-        position += delta;
-        if(position < path.MinPos)
+        targetPosition += delta;
+        if(targetPosition < path.MinPos)
         {
-            position = path.MinPos;
+            targetPosition = path.MinPos;
         } 
-        if(position> path.MaxPos) {
-            position = path.MaxPos;
+        if(targetPosition > path.MaxPos) {
+            targetPosition = path.MaxPos;
 
         }
-        cam.transform.position = path.EvaluatePosition(position);
         //cam.m_PathPosition += delta;
     }
 }

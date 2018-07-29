@@ -3567,7 +3567,7 @@ MonoBehaviour:
   endLanePosition: 1
   floorHeight: -0.6
   jellySize: 75
-  JellySpeed: 10
+  JellySpeed: 500
   jellyReplaceTimer: 0.5
   defaultHealthBar: {fileID: 1277978512532226, guid: 57b860a14a860d742a2c6310e54b3778,
     type: 2}
