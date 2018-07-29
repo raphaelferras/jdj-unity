@@ -13,13 +13,11 @@ public class GameMode : Singleton<GameMode> {
     public GameObject defaultHealthBar;
 
     public GameObject floorPrefab;
-    public GameObject gridPrefab;
     public LanesController lanes;
     public GridController grid;
 
     private void Start()
     {
         lanes = Instantiate(floorPrefab).GetComponent<LanesController>();
-        grid = Instantiate(gridPrefab).GetComponent<GridController>();
     }
 }

@@ -290,6 +290,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Cinemachine.csproj">
+      <Project>{D9EEBEDB-DFC3-5129-AB48-409427AE8119}</Project>
+      <Name>Cinemachine</Name>
+    </ProjectReference>
     <ProjectReference Include="com.unity.render-pipelines.core.Editor.csproj">
       <Project>{E14A6FCC-D8BF-2DA1-0326-17E09C5E0AA1}</Project>
       <Name>com.unity.render-pipelines.core.Editor</Name>
@@ -322,6 +326,10 @@
       <Project>{43CE4B77-0ED1-06DF-D6D8-916516C0693A}</Project>
       <Name>com.unity.postprocessing.Runtime</Name>
     </ProjectReference>
+    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
+      <Project>{E4396B10-1675-7219-C2C9-4057D50DD6CC}</Project>
+      <Name>com.unity.cinemachine.editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.ShaderGraph.Editor.csproj">
       <Project>{097081EC-B172-781E-F676-D45E858A96D6}</Project>
       <Name>Unity.ShaderGraph.Editor</Name>
@@ -329,14 +337,6 @@
     <ProjectReference Include="com.unity.render-pipelines.core.IncludePaths.csproj">
       <Project>{F2B70288-84D1-5F1A-592D-AFB0D48FEE35}</Project>
       <Name>com.unity.render-pipelines.core.IncludePaths</Name>
-    </ProjectReference>
-    <ProjectReference Include="Cinemachine.csproj">
-      <Project>{D9EEBEDB-DFC3-5129-AB48-409427AE8119}</Project>
-      <Name>Cinemachine</Name>
-    </ProjectReference>
-    <ProjectReference Include="com.unity.cinemachine.editor.csproj">
-      <Project>{E4396B10-1675-7219-C2C9-4057D50DD6CC}</Project>
-      <Name>com.unity.cinemachine.editor</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -366,6 +366,8 @@
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\RetryAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\StartGame.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\IClickable.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\LevelSign.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />

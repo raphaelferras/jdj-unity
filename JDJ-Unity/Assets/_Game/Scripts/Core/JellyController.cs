@@ -42,9 +42,9 @@ public class JellyController : MonoBehaviour {
         }
         Vector3 direction = nextPosition - rect.localPosition;
         float value = jellySpeed * Time.deltaTime;
-        if (direction.magnitude > jellySpeed)
+        if (direction.magnitude > value)
         {
-            direction = direction.normalized * jellySpeed;
+            direction = direction.normalized * value;
         } else
         {
             isMoving = false;
