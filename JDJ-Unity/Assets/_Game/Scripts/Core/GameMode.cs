@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameMode : Singleton<GameMode> {
 
+    public static LevelConfig LevelToLoad { get; set; }
+
+
     public float startLanePosition;
     public float endLanePosition;
     public float floorHeight;

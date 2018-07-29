@@ -361,6 +361,8 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Wall.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\CameraController.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\InputController.cs" />
+    <Compile Include="Assets\_Game\Scripts\ScriptableObj\LevelConfig.cs" />
+    <Compile Include="Assets\_Game\Scripts\ScriptableObj\MonsterConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\PauseAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />

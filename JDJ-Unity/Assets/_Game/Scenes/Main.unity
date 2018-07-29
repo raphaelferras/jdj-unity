@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2523,7 +2523,8 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -310.09
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114307520542054208, guid: 71daa7d240f21134492527ec9b238823, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 71daa7d240f21134492527ec9b238823, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &960016480

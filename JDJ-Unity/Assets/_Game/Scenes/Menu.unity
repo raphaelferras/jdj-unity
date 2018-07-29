@@ -90,7 +90,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -948,6 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ab1c003a553fd439f9198f5f0df915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: 8da5c54deeb3edf419cf7e62599ab236, type: 2}
 --- !u!65 &486916174
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1309,6 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4ab1c003a553fd439f9198f5f0df915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: {fileID: 11400000, guid: c1b4616c9e60f1e459b2c9ed3140f77b, type: 2}
 --- !u!1001 &1176258465
 Prefab:
   m_ObjectHideFlags: 0
