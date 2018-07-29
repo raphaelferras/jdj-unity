@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class LanesController : MonoBehaviour {
     public GameObject wallPrefab;
     private GameObject[] lanes;
     private Wall[] walls;
+    public float zWallPosition = 25.5f;
 
     // Use this for initialization
     void Start () {
@@ -42,7 +44,7 @@ public class LanesController : MonoBehaviour {
             lanes[i] = lane;
             GameObject wall = Instantiate(wallPrefab, this.transform);
             Vector3 posWall = wall.transform.position;
-            posWall.Set(x, posWall.y, posWall.z);
+            posWall.Set(x, posWall.y, zWallPosition -1.0f);
             wall.transform.position = posWall;
             walls[i] = wall.GetComponent<Wall>();
         }
@@ -57,6 +59,17 @@ public class LanesController : MonoBehaviour {
         RemoveHightlight();
     }
 
+    internal bool HasWall(int lane, int lanesSize)
+    {
+        for (int i = lane; i < lane + lanesSize; i++)
+        {
+            if(walls[i].HasHealth())
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     public float GetXPosition(int lane)
     {

@@ -20,16 +20,11 @@ public class Wall : MonoBehaviour {
         wallBottomInitialPosition = wallBottom.transform.localPosition;
     }
 
-    // Update is called once per frame
-    void Update () {
-		
-	}
 
     public void Hit(int damage)
     {
         if(damage > 0 && health.hp <= 0)
         {
-            GameState.Instance.Lose();
             return;
         }
         GameObject obj = Instantiate(damageParticle, this.transform.position + Vector3.up * Random.Range(-0.2f, 0.2f) +  Vector3.right * Random.Range(-0.1f, 0.1f), this.transform.rotation);
@@ -74,5 +69,10 @@ public class Wall : MonoBehaviour {
                 wallBottom.transform.localPosition = wallBottomInitialPosition - ((wallTopInitialPosition - wallBottomInitialPosition) * (0.5f - percent) * 2);
             }
         }
+    }
+
+    public bool HasHealth()
+    {
+        return health.hp > 0;
     }
 }
