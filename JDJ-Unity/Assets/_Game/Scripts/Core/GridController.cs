@@ -29,6 +29,8 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     private float canvasWidth;
     private float canvasHeight;
 
+    public LineRenderer glowPath;
+
     // Use this for initialization
     void Start () {
         RectTransform dimensions = GetComponent<RectTransform>();
@@ -80,6 +82,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         selectCount = 0;
         GameMode.Instance.lanes.RemoveHightlight();
         jellyCounter.SetActive(false);
+        ClearPath();
 
     }
 
@@ -171,11 +174,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
 
     private void HandleTouch(PointerEventData eventData)
     {
-        Vector2 position22 = eventData.position;
-        // position.x -= Screen.width / 2;
-        //position.y -= Screen.height / 2;
-        Vector2 position = GetScaledTouch(position22);
-        Debug.Log("position: " + position + "bounds: " + bounds);
+        Vector2 position = GetScaledTouch(eventData.position);
 
         if (bounds.Contains(position))
         {
@@ -192,6 +191,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
                 selected[x, y] = true;
                 selectCount++;
                 grid[x, y].SetSelected(true);
+                AddPositionToPath(grid[x, y].transform.position);
                 if (selectedType == null)
                 {
                     selectedType = grid[x, y].type;
@@ -255,5 +255,16 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         x = (int)(((pos.x - bounds.x) / bounds.width) * colunsCount);
         y = (int)(((pos.y - bounds.y) / bounds.height) * rowsCount);
         y = rowsCount - 1 - y;
+    }
+
+    private void ClearPath()
+    {
+        glowPath.positionCount = 0;
+    }
+
+    private void AddPositionToPath(Vector3 position)
+    {
+        glowPath.positionCount+= 1;
+        glowPath.SetPosition(glowPath.positionCount - 1, position);
     }
 }

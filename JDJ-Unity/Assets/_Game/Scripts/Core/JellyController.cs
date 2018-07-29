@@ -47,6 +47,7 @@ public class JellyController : MonoBehaviour {
             direction = direction.normalized * jellySpeed;
         } else
         {
+            Debug.Log("position " + rect.position);
             isMoving = false;
         }
 

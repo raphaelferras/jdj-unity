@@ -1801,16 +1801,16 @@ LineRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 753954389}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 0
   m_MotionVectors: 0
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 23a730c34a671a74ebfc14764afce5f3, type: 2}
+  - {fileID: 2100000, guid: 99fa6c283ae755d4297030b7a032fbf7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1830,15 +1830,10 @@ LineRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 100
-  m_Positions:
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
-  - {x: 0, y: 1.6, z: 1}
-  - {x: -2.25, y: 2.2, z: 1}
-  - {x: -2.25, y: -4.78, z: 1}
+  m_Positions: []
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 1
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -1884,7 +1879,7 @@ LineRenderer:
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
-    numCapVertices: 0
+    numCapVertices: 3
     alignment: 1
     textureMode: 0
     generateLightingData: 0
@@ -2517,6 +2512,16 @@ Prefab:
         type: 2}
       propertyPath: counterDeltaPosition.y
       value: 0.002
+      objectReference: {fileID: 0}
+    - target: {fileID: 114894633442678676, guid: 71daa7d240f21134492527ec9b238823,
+        type: 2}
+      propertyPath: glowPath
+      value: 
+      objectReference: {fileID: 753954390}
+    - target: {fileID: 224736002868191154, guid: 71daa7d240f21134492527ec9b238823,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -310.09
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71daa7d240f21134492527ec9b238823, type: 2}
