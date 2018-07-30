@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7393151b20a3694e93fc1c85e479ecd, type: 3}
   m_Name: Level_001
   m_EditorClassIdentifier: 
+  nextLevel: {fileID: 11400000, guid: c1b4616c9e60f1e459b2c9ed3140f77b, type: 2}
   monsterList:
   - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
     possibleLanes: 02000000

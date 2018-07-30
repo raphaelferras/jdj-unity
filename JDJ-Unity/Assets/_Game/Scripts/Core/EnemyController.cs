@@ -30,13 +30,16 @@ public class EnemyController : MonoBehaviour {
                 currentLevel.monsterList[currentMonster].possibleLanes[Random.Range(0, currentLevel.monsterList[currentMonster].possibleLanes.Count)]);
             currentMonster++;
         }
+        if (currentMonster >= currentLevel.monsterList.Count && enemies.Count == 0) {
+            GameState.Instance.Win();
+            Destroy(this);
+        }
     }
 
     private void SpawnEnemy(GameObject prefab, int lane)
     {
-        GameObject enemy = Instantiate(prefab);
+        GameObject enemy = Instantiate(prefab, enemyContainer.transform );
         MoveInLane mil = enemy.GetComponent<MoveInLane>();
-        //mil.lane = Random.Range(0, GameMode.Instance.lanes.lanesCount + 1 - mil.lanesSize);
         mil.lane = lane;
         enemies.Add(enemy);
     }

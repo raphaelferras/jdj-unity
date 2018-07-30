@@ -15,12 +15,25 @@ public class GameMode : Singleton<GameMode> {
     public float jellyReplaceTimer;
     public GameObject defaultHealthBar;
 
+    public LevelConfig defaultLevel;
+
     public GameObject floorPrefab;
     public LanesController lanes;
     public GridController grid;
 
+
+    private void Awake()
+    {
+        if (LevelToLoad == null)
+        {
+            LevelToLoad = defaultLevel;
+        }
+    }
+
     private void Start()
     {
+
         lanes = Instantiate(floorPrefab).GetComponent<LanesController>();
+
     }
 }
