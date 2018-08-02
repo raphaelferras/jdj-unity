@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7393151b20a3694e93fc1c85e479ecd, type: 3}
+  m_Name: Level_001
+  m_EditorClassIdentifier: 
+  nextLevel: {fileID: 11400000, guid: c1b4616c9e60f1e459b2c9ed3140f77b, type: 2}
+  monsterList:
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 4
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 8
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 12
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 16
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 20
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 26
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 05000000
+    spawnTime: 26
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 36
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 37
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 38
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 39
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 40
+  - monster: {fileID: 11400000, guid: b6ec6e0a01f2f8a47b8d4d9e11bfc4ca, type: 2}
+    possibleLanes: 05000000
+    spawnTime: 41
