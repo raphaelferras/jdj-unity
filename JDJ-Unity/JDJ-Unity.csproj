@@ -341,11 +341,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_Game\Scripts\Core\EnemyController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\FileSteam.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\GameMode.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\GameState.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\GridController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\JellyController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\Persistance.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\PowerController.cs" />
     <Compile Include="Assets\_Game\Scripts\DestroyParticle.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\DestroyOnTouch.cs" />
