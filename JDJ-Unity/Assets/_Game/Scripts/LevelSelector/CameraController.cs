@@ -1,13 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using Cinemachine;
 
 public class CameraController : Singleton<CameraController> {
 
     CinemachineSmoothPath path;
     private GameObject cam;
-    private float position = 0f;
+    public float position = 0f;
     private float targetPosition = 0f;
     private Vector3 direction ;
     private float targetDirection;
