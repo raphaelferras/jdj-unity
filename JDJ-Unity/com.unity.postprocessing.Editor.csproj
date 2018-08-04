@@ -387,9 +387,9 @@
     <Compile Include="C:\Users\rapha\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.7-preview\PostProcessing\Editor\Utils\Styling.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
-    <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
-    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
+    <None Include="Assets\ExternalLibs\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\ExternalLibs\BrokenVector\FreeLowPolyPack\readme.txt" />
+    <None Include="Assets\ExternalLibs\Simple UI\Fonts\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />

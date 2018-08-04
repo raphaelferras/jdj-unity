@@ -34,8 +34,8 @@ public class TextAnimation : MonoBehaviour {
             }
             float percent = timer / animationTimer;
             percent *= increaseSize;
-            float x = (((1.0f - Mathf.Sin(angle)) * percent) + 1.0f)*initialScale.x;
-            float y = (((1.0f - Mathf.Cos(angle)) * percent) + 1.0f)*initialScale.y;
+            float x = (((1.0f - Mathf.Abs(Mathf.Sin(angle))) * percent) + 1.0f)*initialScale.x;
+            float y = (((1.0f - Mathf.Abs(Mathf.Cos(angle))) * percent) + 1.0f)*initialScale.y;
             rect.localScale = new Vector3(x,y,initialScale.z);
 
         }
