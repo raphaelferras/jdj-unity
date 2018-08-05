@@ -14,7 +14,6 @@ public class Tutorial : MonoBehaviour {
     // Use this for initialization
     void Start () {
         pos = 0.0f;
-
     }
 	
 	// Update is called once per frame

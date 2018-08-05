@@ -383,6 +383,8 @@
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ResumeAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\RetryAction.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\StartGame.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\GameStartAnimation.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\GameStartAnimation1.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\IClickable.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\LevelSign.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\LoadScene.cs" />
