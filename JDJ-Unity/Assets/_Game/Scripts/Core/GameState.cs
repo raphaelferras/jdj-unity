@@ -12,8 +12,9 @@ public class GameState : Singleton<GameState> {
     // Use this for initialization
     void Start () {
         currentState = State.GAME;
+        Time.timeScale = 1;
     }
-	
+
     public State CurrentState()
     {
         return currentState;
@@ -34,6 +35,7 @@ public class GameState : Singleton<GameState> {
     public void Win()
     {
         currentState = State.WIN;
+        LevelController.Instance.LevelPassed(GameMode.LevelToLoad.levelPosition);
     }
 
     public void Lose()

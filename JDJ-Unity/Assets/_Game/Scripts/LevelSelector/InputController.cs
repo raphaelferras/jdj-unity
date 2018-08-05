@@ -6,6 +6,7 @@ public class InputController : MonoBehaviour {
 
     public float swipeSpeed = 0.1f;
     public float maxTimeForClick = 0.2f;
+    public float maxDist = 0.2f;
 
 
     private Vector3 lastMousePosition;
@@ -14,13 +15,7 @@ public class InputController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        if (isMoving)
-        {
-            float delta = ((lastMousePosition - Input.mousePosition).y) * swipeSpeed;
-            //Debug.Log(delta);
-            CameraController.Instance.SetPosition(delta);
-        }
-        lastMousePosition = Input.mousePosition;
+
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -31,16 +26,22 @@ public class InputController : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             lastMousePosition = Input.mousePosition;
-            if(Time.time - startMovingTime < maxTimeForClick)
+            if(Time.time - startMovingTime < maxTimeForClick && (lastMousePosition - Input.mousePosition).magnitude < maxDist)
             {
                 HandleClick(lastMousePosition);
             }
             isMoving = false;
         }
+        if (isMoving)
+        {
+            float delta = ((lastMousePosition - Input.mousePosition).y) * swipeSpeed;
+            //Debug.Log(delta);
+            CameraController.Instance.SetPosition(delta);
+            lastMousePosition = Input.mousePosition;
+        }
 
 
-
-	}
+    }
 
     private void HandleClick(Vector2 position)
     {

@@ -13,6 +13,7 @@ public class MonsterInfo
 [CreateAssetMenu(menuName = "JDJ/Level")]
 public class LevelConfig : ScriptableObject
 {
+    public int levelPosition;
     public LevelConfig nextLevel;
     public List<MonsterInfo> monsterList;
 }

@@ -355,6 +355,7 @@
     <Compile Include="Assets\_Game\Scripts\Core\GridController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\JellyController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\LanesController.cs" />
+    <Compile Include="Assets\_Game\Scripts\Core\LevelController.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\Persistance.cs" />
     <Compile Include="Assets\_Game\Scripts\Core\PowerController.cs" />
     <Compile Include="Assets\_Game\Scripts\DestroyParticle.cs" />
@@ -372,6 +373,7 @@
     <Compile Include="Assets\_Game\Scripts\LevelSelector\CameraController.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\InputController.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\MoveWithCamera.cs" />
+    <Compile Include="Assets\_Game\Scripts\OnSceneLoad\OnMenuLoad.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\LevelConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\MonsterConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
@@ -387,7 +389,7 @@
     <Compile Include="Assets\_Game\Scripts\UI\SplashScreen\TextAnimation.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
-    <Compile Include="Assets\Simple UI\Samples\IconPreview.cs" />
+    <Compile Include="Assets\ExternalLibs\Simple UI\Samples\IconPreview.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -423,9 +425,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
-    <None Include="Assets\BrokenVector\FreeLowPolyPack\readme.txt" />
-    <None Include="Assets\Simple UI\Fonts\OFL.txt" />
+    <None Include="Assets\ExternalLibs\BOXOPHOBIC\Skybox Cubemap Extended\Shaders\Skybox Cubemap Extended.shader" />
+    <None Include="Assets\ExternalLibs\BrokenVector\FreeLowPolyPack\readme.txt" />
+    <None Include="Assets\ExternalLibs\Simple UI\Fonts\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />

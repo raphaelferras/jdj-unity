@@ -6,7 +6,6 @@ public class GameMode : Singleton<GameMode> {
 
     public static LevelConfig LevelToLoad { get; set; }
 
-
     public float startLanePosition;
     public float endLanePosition;
     public float floorHeight;
@@ -21,7 +20,6 @@ public class GameMode : Singleton<GameMode> {
     public LanesController lanes;
     public GridController grid;
 
-
     private void Awake()
     {
         if (LevelToLoad == null)
@@ -32,8 +30,6 @@ public class GameMode : Singleton<GameMode> {
 
     private void Start()
     {
-
         lanes = Instantiate(floorPrefab).GetComponent<LanesController>();
-
     }
 }
