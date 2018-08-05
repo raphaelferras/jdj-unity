@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: Menu
-  minTime: 3
+  minTime: 1.6
 --- !u!4 &168961303
 Transform:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 683556008244ee043a69984cdb28480a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationTimer: 3
-  speed: 10
-  increaseSize: 0.6
-  acceleration: -0.5
+  animationTimer: 1.5
+  speed: 13
+  increaseSize: 0.5
+  acceleration: -3

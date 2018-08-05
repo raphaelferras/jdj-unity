@@ -48,8 +48,8 @@ public class CameraController : Singleton<CameraController> {
         } 
         if(targetPosition > path.MaxPos) {
             targetPosition = path.MaxPos;
-
         }
+        Persistance.data.saved.lastCameraPosition = targetPosition;
     }
 
     public void SetTargetPosition(float p)
