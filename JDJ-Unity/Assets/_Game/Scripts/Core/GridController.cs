@@ -31,9 +31,21 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
     private float canvasHeight;
 
     public LineRenderer glowPath;
+    public Tutorial tutorialObj;
+    public List<Vector2Int> tutorialPosition;
+    public PowerConfig powerTutorial;
 
     // Use this for initialization
     void Start () {
+        if (GameMode.LevelToLoad.isTutorial)
+        {
+            tutorialObj.gameObject.SetActive(true);
+        }
+        else
+        {
+            tutorialObj.gameObject.SetActive(false);
+        }
+
         RectTransform dimensions = GetComponent<RectTransform>();
         canvasWidth = dimensions.rect.width;
         canvasHeight = dimensions.rect.height;
@@ -46,13 +58,28 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         grid = new JellyController[colunsCount, rowsCount];
         selected = new bool[colunsCount, rowsCount];
         previous = new Vector2Int[colunsCount, rowsCount];
+        if (GameMode.LevelToLoad.isTutorial)
+        {
+            tutorialObj.path.Clear();
+            foreach (Vector2Int tutorialPos in tutorialPosition)
+            {
+                JellyController jelly = powerTutorial.InstantiateGrid(jellyContainer.transform);
+                jelly.SetPosition(new Vector3(x + jellySize* tutorialPos.x, y - jellySize * tutorialPos.y, 0));
+                grid[tutorialPos.x, tutorialPos.y] = jelly;
+                tutorialObj.path.Add(jelly.transform.position);
+            }
+        }
+
         for (int i = 0; i < rowsCount; i++, y -= jellySize)
         {
             for(int j =0; j < colunsCount; j++, x += jellySize)
             {
-                JellyController jelly = possibleJelly[Random.Range(0, possibleJelly.Count)].InstantiateGrid(jellyContainer.transform);
-                jelly.SetPosition(new Vector3(x, y, 0));
-                grid[j, i] = jelly;
+                if(grid[j, i] == null)
+                {
+                    JellyController jelly = possibleJelly[Random.Range(0, possibleJelly.Count)].InstantiateGrid(jellyContainer.transform);
+                    jelly.SetPosition(new Vector3(x, y, 0));
+                    grid[j, i] = jelly;
+                }
                 selected[j, i] = false;
             }
             x = leftPosition;
@@ -67,6 +94,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
         selectCount = 0;
         jellyCounter.SetActive(false);
         lastSelectedX = -1;
+
     }
 
     private void RemoveGridSelection()
@@ -250,6 +278,7 @@ public class GridController : MonoBehaviour, IDragHandler, IPointerDownHandler, 
             if (selectCount >= 3)
             {
                 PowerController.Instance.Spawn(lastSelectedX, selectedType, selectCount -2);
+                tutorialObj.gameObject.SetActive(false);
                 ClearSelectedGrid();
             }
         }

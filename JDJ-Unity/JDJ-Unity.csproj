@@ -387,6 +387,7 @@
     <Compile Include="Assets\_Game\Scripts\UI\LevelSign.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\LoadScene.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\SplashScreen\TextAnimation.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\Tutorial.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\UIController.cs" />
     <Compile Include="Assets\_Game\Scripts\Utils\Singleton.cs" />
     <Compile Include="Assets\ExternalLibs\Simple UI\Samples\IconPreview.cs" />
