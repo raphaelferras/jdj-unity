@@ -1,15 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class LevelSign : IClickable
 {
-    public LevelConfig level;
+    public int id;
+    public GameObject padlocker;
+    public bool isClickable = false;
+
+   void Start()
+    {
+        if( id <= LevelController.Instance.CurrentLevel())
+        {
+            isClickable = true;
+            padlocker.SetActive(false);
+        } else
+        {
+            isClickable = false;
+            padlocker.SetActive(true);
+        }
+    }
 
     public override void OnClickObject()
     {
-        GameMode.LevelToLoad = level;
-        SceneManager.LoadScene("Main");
+        if (isClickable)
+        {
+            LevelController.Instance.PlayLevel(id);
+        } else
+        {
+            TextAnimation ta = padlocker.GetComponent<TextAnimation>();
+            ta.ResetTimer();
+        }
     }
 }

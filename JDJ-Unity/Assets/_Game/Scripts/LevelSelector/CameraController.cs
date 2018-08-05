@@ -50,6 +50,10 @@ public class CameraController : Singleton<CameraController> {
             targetPosition = path.MaxPos;
 
         }
-        //cam.m_PathPosition += delta;
+    }
+
+    public void SetTargetPosition(float p)
+    {
+        targetPosition = p;
     }
 }

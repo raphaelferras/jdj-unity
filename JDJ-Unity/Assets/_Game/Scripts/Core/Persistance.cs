@@ -9,20 +9,15 @@ using System.IO;
 public class SavedData
 {
     public int currentLevel;
+    public float lastCameraPosition;
     public int coins;
 }
 
 public class Persistance : MonoBehaviour {
 
-    public int GetCurrentLevel()
-    {
-        return saved.currentLevel;
-    }
-
-
     public static Persistance data;
 
-    public String filePath;
+    public const String filePath = "/saveddata.dat";
 
     public SavedData saved;
 
@@ -30,7 +25,6 @@ public class Persistance : MonoBehaviour {
     void Awake () {
 		if (data == null)
         {
-            filePath = Application.persistentDataPath + "/saveddata.dat";
             DontDestroyOnLoad(gameObject);
             data = this;
             LoadData();
@@ -43,7 +37,7 @@ public class Persistance : MonoBehaviour {
 	private void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
-        FileStream file = File.Create(filePath);
+        FileStream file = File.Create(Application.persistentDataPath + filePath);
 
         bf.Serialize(file, saved);
         file.Close();
@@ -51,10 +45,10 @@ public class Persistance : MonoBehaviour {
 
     private void LoadData()
     {
-        if (File.Exists(filePath))
+        if (File.Exists(Application.persistentDataPath + filePath))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(filePath, FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + filePath, FileMode.Open);
 
             saved = (SavedData)bf.Deserialize(file);
             file.Close();
@@ -74,5 +68,19 @@ public class Persistance : MonoBehaviour {
     private void OnDestroy()
     {
         Save();
+    }
+
+    public int GetCurrentLevel()
+    {
+        return saved.currentLevel;
+    }
+
+    public void SetCurrentLevel(int levelId)
+    {
+        if(levelId == saved.currentLevel + 1)
+        {
+            saved.currentLevel = levelId;
+            Save();
+        }
     }
 }
