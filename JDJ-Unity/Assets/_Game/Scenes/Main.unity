@@ -3682,6 +3682,12 @@ Prefab:
       propertyPath: tutorialPosition.Array.data[2].y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114894633442678676, guid: 71daa7d240f21134492527ec9b238823,
+        type: 2}
+      propertyPath: possibleJelly.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b6dc395dbc453049bb01c9184066dff,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 71daa7d240f21134492527ec9b238823, type: 2}
   m_IsPrefabParent: 0

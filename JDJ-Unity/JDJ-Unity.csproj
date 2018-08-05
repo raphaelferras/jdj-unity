@@ -369,6 +369,7 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\HealPower.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\Power.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Power\PowerHitInfo.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Power\WavePower.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Wall.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\CameraController.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\InputController.cs" />
