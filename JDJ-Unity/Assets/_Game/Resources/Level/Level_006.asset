@@ -11,7 +11,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7393151b20a3694e93fc1c85e479ecd, type: 3}
   m_Name: Level_006
   m_EditorClassIdentifier: 
-  levelPosition: 0
-  nextLevel: {fileID: 0}
-  monsterList: []
+  levelPosition: 6
+  nextLevel: {fileID: 11400000, guid: 063af6b61c89f7e428ea5dc6feb1794b, type: 2}
+  monsterList:
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 3
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 3
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 6
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 6
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 6
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 9
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 9
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 12
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 12
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 12
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 15
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 15
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 18
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 18
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 18
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 21
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 03000000
+    spawnTime: 21
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 00000000
+    spawnTime: 24
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 02000000
+    spawnTime: 24
+  - monster: {fileID: 11400000, guid: bf161ed47f06ce249a300ece9e2f986d, type: 2}
+    possibleLanes: 04000000
+    spawnTime: 24
   isTutorial: 0
