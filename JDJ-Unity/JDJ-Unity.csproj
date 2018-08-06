@@ -373,6 +373,7 @@
     <Compile Include="Assets\_Game\Scripts\Gameplay\Wall.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\CameraController.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\InputController.cs" />
+    <Compile Include="Assets\_Game\Scripts\LevelSelector\LevelOptmizer.cs" />
     <Compile Include="Assets\_Game\Scripts\LevelSelector\MoveWithCamera.cs" />
     <Compile Include="Assets\_Game\Scripts\OnSceneLoad\OnMenuLoad.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\LevelConfig.cs" />

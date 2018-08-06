@@ -33,7 +33,7 @@ public class CameraController : Singleton<CameraController> {
         position += (targetPosition - position) * hysteresis;
 
         cam.transform.position = path.EvaluatePosition(position);
-        Quaternion rot = Quaternion.LookRotation(path.EvaluatePosition(position + 0.01f) - cam.transform.position);
+        Quaternion rot = Quaternion.LookRotation(path.EvaluatePosition(position + 0.001f) - cam.transform.position);
         Vector3 euler = rot.eulerAngles;
         cam.transform.rotation = Quaternion.Euler(20, euler.y, euler.z);
 
@@ -46,8 +46,8 @@ public class CameraController : Singleton<CameraController> {
         {
             targetPosition = path.MinPos;
         } 
-        if(targetPosition > path.MaxPos) {
-            targetPosition = path.MaxPos;
+        if(targetPosition > path.MaxPos - 0.002f) {
+            targetPosition = path.MaxPos - 0.002f;
         }
         Persistance.data.saved.lastCameraPosition = targetPosition;
     }
