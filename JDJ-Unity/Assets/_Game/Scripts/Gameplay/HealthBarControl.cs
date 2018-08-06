@@ -7,9 +7,11 @@ public class HealthBarControl : MonoBehaviour {
     private Health health;
     private Slider slider;
     private GameObject sliderObj;
+    public Vector3 healthbarDeltaPosition;
 	// Use this for initialization
 	void Start () {
         sliderObj = Instantiate(GameMode.Instance.defaultHealthBar, this.transform);
+        sliderObj.GetComponent<RectTransform>().localPosition += healthbarDeltaPosition;
         slider = sliderObj.GetComponentInChildren<Slider>();
         health  = GetComponent<Health>();
         health.healthChanged.AddListener(HealthValueChanged);

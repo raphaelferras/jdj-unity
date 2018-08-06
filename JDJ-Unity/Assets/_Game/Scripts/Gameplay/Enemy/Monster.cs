@@ -16,6 +16,8 @@ public class Monster : IHitable
     private const string DIE_TRIGGER = "Die";
     private const string DAMAGE_TRIGGER = "TakeDamage";
 
+    private bool lastAttackWasWall = false;
+
     private void Start()
     {
         health = GetComponent<Health>();
@@ -48,11 +50,8 @@ public class Monster : IHitable
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
-        if (attackTimer < 0)
-        {
-            attackTimer += attackInterval;
-            GameState.Instance.Lose();
-        }
+        lastAttackWasWall = false;
+
     }
 
     public void AttackWall()
@@ -61,11 +60,8 @@ public class Monster : IHitable
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
-        if (attackTimer < 0)
-        {
-            attackTimer += attackInterval;
-            GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);
-        }
+        lastAttackWasWall = true;
+
     }
 
     public void Die()
@@ -100,6 +96,21 @@ public class Monster : IHitable
             else
             {
                 Die();
+            }
+        }
+    }
+
+    public void AttackEvent()
+    {
+        if (attackTimer < 0)
+        {
+            attackTimer += attackInterval;
+            if (!lastAttackWasWall)
+            {
+                GameState.Instance.Lose();
+            } else
+            {
+                GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);
             }
         }
     }

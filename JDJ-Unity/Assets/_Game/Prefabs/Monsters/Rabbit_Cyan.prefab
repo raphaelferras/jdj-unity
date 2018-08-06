@@ -65,6 +65,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4656796925656270}
   - component: {fileID: 95616631545164150}
+  - component: {fileID: 114226332366971844}
   m_Layer: 8
   m_Name: Rabbit_Cyan
   m_TagString: Untagged
@@ -611,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 1072548220642912}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 40, y: 40, z: 40}
+  m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children:
   - {fileID: 4346749390234812}
   - {fileID: 4752355850636964}
@@ -772,6 +773,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114226332366971844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1072548220642912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51137674f2fa3ee4fb729967a727d8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114378632590011474
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -783,7 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e4e359bdb5ac94d896063425b0333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 30
   hp: 0
   healthChanged:
     m_PersistentCalls:
@@ -817,8 +829,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  lanesSize: 1
+  speed: 3
+  lanesSize: 2
   lane: 0
   position: 0
   lanePos: 0
@@ -837,8 +849,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95616631545164150}
-  damage: 10
-  attackInterval: 2
+  damage: 4
+  attackInterval: 1
 --- !u!137 &137915551525234940
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

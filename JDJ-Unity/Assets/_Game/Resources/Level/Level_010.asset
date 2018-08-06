@@ -11,7 +11,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7393151b20a3694e93fc1c85e479ecd, type: 3}
   m_Name: Level_010
   m_EditorClassIdentifier: 
-  levelPosition: 0
+  levelPosition: 10
   nextLevel: {fileID: 0}
-  monsterList: []
+  monsterList:
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
+  - monster: {fileID: 11400000, guid: d6706a9236ee9b5429f905e0733afc52, type: 2}
+    possibleLanes: 01000000
+    spawnTime: 0
   isTutorial: 0

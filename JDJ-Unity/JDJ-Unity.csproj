@@ -360,6 +360,7 @@
     <Compile Include="Assets\_Game\Scripts\Core\PowerController.cs" />
     <Compile Include="Assets\_Game\Scripts\DestroyParticle.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\DestroyOnTouch.cs" />
+    <Compile Include="Assets\_Game\Scripts\Gameplay\Enemy\AnimationReveiver.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Enemy\Monster.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\Health.cs" />
     <Compile Include="Assets\_Game\Scripts\Gameplay\HealthBarControl.cs" />
