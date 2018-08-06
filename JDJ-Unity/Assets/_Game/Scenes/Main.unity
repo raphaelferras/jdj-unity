@@ -4522,7 +4522,7 @@ MonoBehaviour:
   jellyReplaceTimer: 0.5
   defaultHealthBar: {fileID: 1277978512532226, guid: 57b860a14a860d742a2c6310e54b3778,
     type: 2}
-  defaultLevel: {fileID: 11400000, guid: 8e6cac879b7da4d48998b767b3d6329a, type: 2}
+  defaultLevel: {fileID: 11400000, guid: 0599f4512e0098e4fb6215cd749da4b4, type: 2}
   floorPrefab: {fileID: 1867333762144184, guid: 85357c29bec629f49b442decae708ad3,
     type: 2}
   lanes: {fileID: 0}
