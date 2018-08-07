@@ -435,6 +435,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 114091640729857888, guid: 2f0becbffb53b1f47b81c1ae7cf0ef04,
+        type: 2}
+      propertyPath: saved.currentLevel
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f0becbffb53b1f47b81c1ae7cf0ef04, type: 2}
   m_IsPrefabParent: 0
@@ -4519,10 +4524,10 @@ MonoBehaviour:
   floorHeight: -0.6
   jellySize: 75
   JellySpeed: 500
-  jellyReplaceTimer: 0.5
+  jellyReplaceTimer: 0.45
   defaultHealthBar: {fileID: 1277978512532226, guid: 57b860a14a860d742a2c6310e54b3778,
     type: 2}
-  defaultLevel: {fileID: 11400000, guid: 7d122bb250a3e214285348af5176332d, type: 2}
+  defaultLevel: {fileID: 11400000, guid: 9d8d8fa2257f670478c2f724f38060c1, type: 2}
   floorPrefab: {fileID: 1867333762144184, guid: 85357c29bec629f49b442decae708ad3,
     type: 2}
   lanes: {fileID: 0}

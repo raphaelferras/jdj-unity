@@ -1261,7 +1261,7 @@ Animator:
   m_GameObject: {fileID: 1251236605141724}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e85addd11f719ec488327f70532c7e54, type: 3}
-  m_Controller: {fileID: 22100000, guid: 6729af2de11e5ab49b367fbada32c92c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0d418f3e0a5093640acb01984015ccb9, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1281,6 +1281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db412c77efe3e64b8456366194065d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbarDeltaPosition: {x: 0, y: 0, z: 0}
 --- !u!114 &114514777690400676
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.3
+  speed: 0.75
   lanesSize: 3
   lane: 0
   position: 0
@@ -648,6 +648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db412c77efe3e64b8456366194065d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbarDeltaPosition: {x: 0, y: 0, z: 0}
 --- !u!137 &137875703977228782
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

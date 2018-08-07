@@ -10,11 +10,12 @@ public class Monster : IHitable
     private float attackTimer;
     private Health health;
     private MoveInLane move;
-
+    
     private const string MOVE_BOOL = "Move";
     private const string ATTACK_TRIGGER = "Attack";
     private const string DIE_TRIGGER = "Die";
     private const string DAMAGE_TRIGGER = "TakeDamage";
+    private const string CELEBRATE_TRIGGER = "Celebrate";
 
     private bool lastAttackWasWall = false;
 
@@ -23,6 +24,7 @@ public class Monster : IHitable
         health = GetComponent<Health>();
         move = GetComponent<MoveInLane>();
         attackTimer = 0.0f;
+        
     }
 
     public void SetMove(bool value)
@@ -32,7 +34,7 @@ public class Monster : IHitable
             animator.SetBool(MOVE_BOOL, value);
         }
     }
-
+    private bool isCelebrating = false;
     public void Update()
     {
         if(attackTimer > 0)
@@ -41,6 +43,14 @@ public class Monster : IHitable
         } else
         {
             attackTimer = -0.00001f;
+        }
+        if (!isCelebrating && GameState.Instance.CurrentState() == GameState.State.LOSE)
+        {
+            isCelebrating = true;
+            if (animator != null)
+            {
+                animator.SetTrigger(CELEBRATE_TRIGGER);
+            }
         }
     }
 
