@@ -10,17 +10,21 @@ public class Monster : IHitable
     private float attackTimer;
     private Health health;
     private MoveInLane move;
-
+    
     private const string MOVE_BOOL = "Move";
     private const string ATTACK_TRIGGER = "Attack";
     private const string DIE_TRIGGER = "Die";
     private const string DAMAGE_TRIGGER = "TakeDamage";
+    private const string CELEBRATE_TRIGGER = "Celebrate";
+
+    private bool lastAttackWasWall = false;
 
     private void Start()
     {
         health = GetComponent<Health>();
         move = GetComponent<MoveInLane>();
         attackTimer = 0.0f;
+        
     }
 
     public void SetMove(bool value)
@@ -30,7 +34,7 @@ public class Monster : IHitable
             animator.SetBool(MOVE_BOOL, value);
         }
     }
-
+    private bool isCelebrating = false;
     public void Update()
     {
         if(attackTimer > 0)
@@ -40,6 +44,14 @@ public class Monster : IHitable
         {
             attackTimer = -0.00001f;
         }
+        if (!isCelebrating && GameState.Instance.CurrentState() == GameState.State.LOSE)
+        {
+            isCelebrating = true;
+            if (animator != null)
+            {
+                animator.SetTrigger(CELEBRATE_TRIGGER);
+            }
+        }
     }
 
     public void Attack()
@@ -48,11 +60,8 @@ public class Monster : IHitable
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
-        if (attackTimer < 0)
-        {
-            attackTimer += attackInterval;
-            GameState.Instance.Lose();
-        }
+        lastAttackWasWall = false;
+
     }
 
     public void AttackWall()
@@ -61,11 +70,8 @@ public class Monster : IHitable
         {
             animator.SetTrigger(ATTACK_TRIGGER);
         }
-        if (attackTimer < 0)
-        {
-            attackTimer += attackInterval;
-            GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);
-        }
+        lastAttackWasWall = true;
+
     }
 
     public void Die()
@@ -100,6 +106,21 @@ public class Monster : IHitable
             else
             {
                 Die();
+            }
+        }
+    }
+
+    public void AttackEvent()
+    {
+        if (attackTimer < 0)
+        {
+            attackTimer += attackInterval;
+            if (!lastAttackWasWall)
+            {
+                GameState.Instance.Lose();
+            } else
+            {
+                GameMode.Instance.lanes.Attack(move.lane, move.lanesSize, damage);
             }
         }
     }

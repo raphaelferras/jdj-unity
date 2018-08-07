@@ -581,6 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4465736824497170}
   - component: {fileID: 95309473846717546}
+  - component: {fileID: 114565534027976474}
   m_Layer: 8
   m_Name: Bat_Green
   m_TagString: Untagged
@@ -1343,7 +1344,7 @@ Animator:
   m_GameObject: {fileID: 1877520334739154}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 59afa1f2c595d6343b15e945602e1f8f, type: 3}
-  m_Controller: {fileID: 9100000, guid: 0d418f3e0a5093640acb01984015ccb9, type: 2}
+  m_Controller: {fileID: 22100000, guid: 6729af2de11e5ab49b367fbada32c92c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1363,7 +1364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e4e359bdb5ac94d896063425b0333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 30
+  maxHealth: 15
   hp: 0
   healthChanged:
     m_PersistentCalls:
@@ -1386,6 +1387,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9db412c77efe3e64b8456366194065d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthbarDeltaPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &114565534027976474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1877520334739154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51137674f2fa3ee4fb729967a727d8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114682837777685688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1397,7 +1410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 4
   lanesSize: 1
   lane: 0
   position: 0
@@ -1417,8 +1430,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95309473846717546}
-  damage: 5
-  attackInterval: 0.7
+  damage: 15
+  attackInterval: 0.5
 --- !u!137 &137304961428472518
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

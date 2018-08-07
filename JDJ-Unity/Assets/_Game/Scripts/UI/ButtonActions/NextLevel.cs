@@ -15,9 +15,8 @@ public class NextLevel : MonoBehaviour {
 
     public void GoToNextLevel()
     {
-        GameMode.LevelToLoad = GameMode.LevelToLoad.nextLevel;
-
-        SceneManager.LoadScene("Main");
-
+        OnMenuLoad.goToLevel = true;
+        OnMenuLoad.next = GameMode.LevelToLoad.levelPosition + 1;
+        SceneManager.LoadScene("Menu");
     }
 }

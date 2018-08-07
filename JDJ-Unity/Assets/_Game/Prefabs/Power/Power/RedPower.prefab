@@ -149,6 +149,7 @@ MonoBehaviour:
   lanePos: 0
   lastMoveSet: 0
   power: 1
+  wallPosition: 0
 --- !u!114 &114574268934272046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b484bf9a1fedae54db7094ca6d3bdfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 60
+  damage: 40
 --- !u!135 &135094883223904110
 SphereCollider:
   m_ObjectHideFlags: 1

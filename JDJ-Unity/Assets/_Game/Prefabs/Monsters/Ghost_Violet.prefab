@@ -126,6 +126,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4951401291101260}
   - component: {fileID: 95233764508257882}
+  - component: {fileID: 114787291337563380}
   m_Layer: 8
   m_Name: Ghost_Violet
   m_TagString: Untagged
@@ -373,7 +374,7 @@ Transform:
   m_GameObject: {fileID: 1705496213533556}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 4309159115578992}
   - {fileID: 4954750194685874}
@@ -436,8 +437,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95233764508257882}
-  damage: 8
-  attackInterval: 1.6
+  damage: 30
+  attackInterval: 0.5
+--- !u!114 &114787291337563380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1705496213533556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51137674f2fa3ee4fb729967a727d8e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114947280634468060
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,7 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37e4e359bdb5ac94d896063425b0333d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 60
   hp: 0
   healthChanged:
     m_PersistentCalls:
@@ -483,8 +495,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec1a9ee43c4f28f47a8c66a82038857f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  lanesSize: 1
+  speed: 1.5
+  lanesSize: 2
   lane: 0
   position: 0
   lanePos: 0
