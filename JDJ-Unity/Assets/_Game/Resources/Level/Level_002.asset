@@ -93,3 +93,4 @@ MonoBehaviour:
     possibleLanes: 05000000
     spawnTime: 46
   isTutorial: 0
+  cameraPosition: 1.43

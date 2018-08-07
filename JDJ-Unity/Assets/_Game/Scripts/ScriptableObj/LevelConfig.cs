@@ -17,4 +17,5 @@ public class LevelConfig : ScriptableObject
     public LevelConfig nextLevel;
     public List<MonsterInfo> monsterList;
     public bool isTutorial;
+    public float cameraPosition;
 }
