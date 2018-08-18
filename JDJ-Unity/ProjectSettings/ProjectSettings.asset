@@ -117,7 +117,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 0.034
+  bundleVersion: 0.100
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -150,9 +150,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.cajuapps.jdjunity
+    Android: com.cajuapps.holdthefence
   buildNumber: {}
-  AndroidBundleVersionCode: 34
+  AndroidBundleVersionCode: 100
   AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 27
   AndroidPreferredInstallLocation: 1
@@ -240,8 +240,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 5
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/rapha/Documents/playstoreKey/HoldTheFence.keystore
+  AndroidKeyaliasName: hold the fence release
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
   AndroidEnableTango: 0
@@ -257,7 +257,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 0a23bc855afc41b42aab387e65c862d0, type: 3}
+      m_Icon: {fileID: 2800000, guid: 08eda4e8cde751d4eb059370b5919eee, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
