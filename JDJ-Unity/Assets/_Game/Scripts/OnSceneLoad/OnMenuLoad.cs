@@ -16,7 +16,7 @@ public class OnMenuLoad : MonoBehaviour {
             goToLevel = false;
             int level = next;
 
-            if(level >= LevelController.Instance.levelList.Count)
+            if(level > LevelController.Instance.levelList.Count)
             {
                 CameraController.Instance.SetTargetPosition(finalSignPosition);
             } else

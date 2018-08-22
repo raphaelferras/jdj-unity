@@ -380,6 +380,7 @@
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\LevelConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\MonsterConfig.cs" />
     <Compile Include="Assets\_Game\Scripts\ScriptableObj\PowerConfig.cs" />
+    <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\ExitGame.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\HomeButton.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\NextLevel.cs" />
     <Compile Include="Assets\_Game\Scripts\UI\ButtonActions\PauseAction.cs" />
